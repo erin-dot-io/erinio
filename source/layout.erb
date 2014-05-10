@@ -5,6 +5,9 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
     <title>Blog Title<%= ' - ' + current_article.title unless current_article.nil? %></title>
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
+    <script type="text/javascript" src="//use.typekit.net/lrp5xzb.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <%= stylesheet_link_tag "all" %>
   </head>
   <body>
 
