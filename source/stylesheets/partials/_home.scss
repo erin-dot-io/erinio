@@ -18,7 +18,7 @@ body {
 
 .header-bg {
   @include position(absolute, 0px 0% 0px 0px);
-  background: url('http://cl.ly/image/1v240F0f393Z/IMG_0004.jpg') no-repeat center center;
+  background: url('http://cl.ly/image/0p0T062k2C08/IMG_0004.jpg') no-repeat center center;
   background-size: cover;
   @include transition-property(all);
   @include transition-duration(500ms);
