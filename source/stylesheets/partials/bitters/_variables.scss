@@ -2,8 +2,9 @@
 ///////////////////////////////////////////////////////////////////////////////
 $sans-serif: $helvetica;
 $serif: $georgia;
+$mono: 'courier-prime', 'Courier New', Courier, monospace;
 
-$base-font-family: $sans-serif;
+$base-font-family: $mono;
 $header-font-family: 'brandon-grotesque', $helvetica;
 
 // Sizes

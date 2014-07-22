@@ -13,51 +13,55 @@ html class="no-js" lang="en"
     = stylesheet_link_tag "all"
     = javascript_include_tag  "all"
 
-	body
-		#container.container.intro-effect-side
-			header.header
-				.header-bg
-				.header-overlay
-					.header-top-left
-						a.icon-instagram
-						a.icon-twitter
-						a.icon-dribbble
-						a.icon-tumblr
-						a.icon-waves
-						.title-alt.title-erinautomatic
-							.h1 erinautomatic
-						.title-alt.title-edk
-							.h1 edk
-						.title-name
-							h1.h1
-								' erin
-								wbr
-								| keeffe
-						/ p.subline Designer of things.
-			button.trigger data-info=("Click to see the header effect")
-			  span Trigger
+  body
+    .container.intro-effect-side
+      header.header
+        .header-bg
+        .header-overlay
+          .header-top-left
+            .title-alt.title-erinautomatic
+              .h1 erinautomatic
+            .title-alt.title-edk
+              .h1 edk
+            .title-name
+              h1.h1
+                ' erin
+                wbr
+                | keeffe
+            a.icon-instagram href="http://www.instagram.com/erinautomatic" title="@erinautomatic"
+            a.icon-twitter href="http://twitter.com/erinautomatic" title="@erinautomatic"
+            / a.icon-dribbble
+            a.icon-octoface href="http://github.com/erinautomatic" title="@erinautomatic"
+            a.icon-code href="http://gist.github.com/erinautomatic" title="@erinautomatic"
+            a.icon-paperplane href="mailto:erin+website@erin.io" title="hi"
+            a.icon-air.last href="https://vine.co/v/bF1wF9i5vmA" title="so wavey"
+            p.subline Soon...
+      article.content
+        / button.trigger data-info="Click to see the header effect"
+        /   span Trigger
+        / p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam repellat enim blanditiis, molestiae ut nisi hic sapiente ab recusandae mollitia debitis nulla, modi quibusdam vel maxime aut doloribus, laudantium laborum.
 
 
 
 
 
 
-			article.content
+      / article.content
 
-			  / section#articles role="main"
-			  /   = yield
-			  / aside
-			  /   h2 Recent Articles
-			  /   ol
-			  /     - blog.articles[0...10].each do |article|
-			  /       li
-			  /         = link_to article.title, article
-			  /         span= article.date.strftime('%b %e')
-			  /   h2 Tags
-			  /   ol
-			  /     - blog.tags.each do |tag, articles|
-			  /       li= link_to "#{tag} (#{articles.size})", tag_path(tag)
-			  /   h2 By Year
-			  /   ol
-			  /     - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
-			  /       li= link_to "#{year} (#{articles.size})", blog_year_path(year)
+        / section#articles role="main"
+        /   = yield
+        / aside
+        /   h2 Recent Articles
+        /   ol
+        /     - blog.articles[0...10].each do |article|
+        /       li
+        /         = link_to article.title, article
+        /         span= article.date.strftime('%b %e')
+        /   h2 Tags
+        /   ol
+        /     - blog.tags.each do |tag, articles|
+        /       li= link_to "#{tag} (#{articles.size})", tag_path(tag)
+        /   h2 By Year
+        /   ol
+        /     - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
+        /       li= link_to "#{year} (#{articles.size})", blog_year_path(year)

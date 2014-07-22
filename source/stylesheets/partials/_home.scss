@@ -35,7 +35,10 @@ body {
 
 .header-top-left {
   @include position(absolute, 30px 100px 0 40px);
-  padding-top: 100px;
+  // padding-top: 100px;
+  @include media($phone-wide) {
+    @include position(absolute, 16px 16px 0 16px);
+  }
   color: $overlay-text-color;
   .h1 {
     display: inline;
@@ -53,12 +56,19 @@ body {
     position: relative;
     z-index: 10;
     margin-right: 20px;
-    height: 16px;
-    width: 16px;
+    margin-top: 15px;
     color: $overlay-text-color;
     cursor: pointer;
     opacity: .8;
+    &:last-child {margin-right: 0;}
     &:hover {opacity: 1;}
+    @include media($phone-wide) {
+      font-size: 26px;
+      margin-right: 26px;
+    }
+  }
+  .subline {
+    padding-top: 10px;
   }
   // &.with-at h1:before {content: "@";}
 }
@@ -66,5 +76,5 @@ body {
 .title-alt {display: none;}
 
 .title-alt, .title-name {
-  @include position(absolute, 0px 0 0 0px);
+  // @include position(absolute, 0px 0 0 0px);
 }
