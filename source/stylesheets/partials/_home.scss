@@ -16,35 +16,94 @@ body {
   width: 100%;
 }
 
-.header-bg {
+.bg-canvas {
+  @include position(absolute, 0px 0px 0px 0px);
+  overflow: hidden;
+  background-color: $off-gray;
+}
+
+.bg-canvas__image {
   @include position(absolute, 0px 0% 0px 0px);
-  background: url('http://cl.ly/image/0p0T062k2C08/IMG_0004.jpg') no-repeat center center;
+  background-repeat: no-repeat;
+  background-position: bottom left;
   background-size: cover;
+  // background-attachment: fixed;
+  @include transition(opacity 500ms $scroll-curve);
+  opacity: 0.75;
+  .modify & {opacity: 1;}
+}
+
+.bg-canvas__mask {
+  position: absolute;
+  background-color: white;
   @include transition-property(all);
   @include transition-duration(500ms);
-  @include transition-timing-function(cubic-bezier(0.7,0,0.3,1));
-  .modify & {
-    @include position(absolute, 20px 70% 20px 20px);
-  }
+  @include transition-timing-function($scroll-curve);
+  .modify.modify-refresh & {@include transition-duration(0ms);}
+}
+
+.mask--top {
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: $bg-mask-size-top;
+  @include transform(translateY(-100%));
+  .modify & {@include transform(translateY(0))}
+}
+.mask--right {
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: $bg-mask-size-side;
+  @include transform(translateX(100%));
+  .modify & {@include transform(translateX(0))}
+}
+.mask--bottom {
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: $bg-mask-size-top;
+  @include transform(translateY(100%));
+  .modify & {@include transform(translateY(0))}
+}
+.mask--left {
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  width: 60%;
+  @include transform(translateX(-100%));
+  .modify & {@include transform(translateX(0))}
 }
 
 .header-overlay {
-  @include position(absolute, 0px 0px 0px 0px);
+  // @include position(absolute, 0px 0px 0px 0px);
 }
 
 
 .header-top-left {
-  @include position(absolute, 30px 100px 0 40px);
-  // padding-top: 100px;
-  @include media($phone-wide) {
-    @include position(absolute, 16px 16px 0 16px);
-  }
+  @include position(absolute, $bg-mask-size-top 0 0 $bg-mask-size-side);
+  width: $header-left-width;
+  @include transition-property(color, transform, top);
+  @include transition-duration(500ms);
+  @include transition-timing-function($scroll-curve);
   color: $overlay-text-color;
+  @include transform(translateY(300px));
+  .modify & {
+    color: $dark-gray;
+    // top: $bg-mask-size-top;
+    @include transform(translateY(0));
+  }
+  .header-title {
+    position: absolute;
+    top: 0;
+  }
   .h1 {
     display: inline;
-    color: $overlay-text-color;
-    font-weight: 100;
-    font-size: $base-font-size * 6;
+    font-weight: 400;
+    // text-transform: uppercase;
+    letter-spacing: 8px;
+    // font-style: italic;
+    font-size: $base-font-size * 3;
     line-height: .9;
     // &:before {
     //   position: absolute;
@@ -55,26 +114,67 @@ body {
     display: inline-block;
     position: relative;
     z-index: 10;
-    margin-right: 20px;
-    margin-top: 15px;
+    width: 36px;
+    margin-top: 65px;
     color: $overlay-text-color;
     cursor: pointer;
     opacity: .8;
+    @include transition(color 500ms $scroll-curve);
+    .modify & {color: $dark-gray}
     &:last-child {margin-right: 0;}
-    &:hover {opacity: 1;}
-    @include media($phone-wide) {
-      font-size: 26px;
-      margin-right: 26px;
+    &:hover {
+      opacity: 1;
+       ~ .title-name {display: none;}
+    }
+  }
+  .trigger-erinautomatic {
+    &:hover {
+      ~ .title-erinautomatic {display: block;}
+    }
+  }
+  .trigger-email {
+    &:hover {
+      ~ .title-email {display: block;}
+    }
+  }
+  .trigger-wavey {
+    &:hover {
+      ~ .title-wavey {display: block;}
     }
   }
   .subline {
     padding-top: 10px;
   }
   // &.with-at h1:before {content: "@";}
+  @include media($phone-wide) {
+    @include position(absolute, 16px 16px 0 16px);
+    a {
+      font-size: 26px;
+      margin-right: 26px;
+    }
+  }
+  @include media($netbook-13) {
+    @include transform(translateY(200px));
+  }
 }
 
 .title-alt {display: none;}
 
 .title-alt, .title-name {
   // @include position(absolute, 0px 0 0 0px);
+}
+
+.slide-trigger {
+  cursor: s-resize;
+  .modify & {cursor: default;}
+}
+
+.header-content {
+  @include position(absolute, ($bg-mask-size-top * 3) 0 0 $bg-mask-size-side);
+  width: $header-left-width;
+}
+
+.slide-in-item {
+  opacity: 0;
+  visibility: hidden;
 }

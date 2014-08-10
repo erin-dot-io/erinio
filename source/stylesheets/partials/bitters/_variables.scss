@@ -5,7 +5,7 @@ $serif: $georgia;
 $mono: 'courier-prime', 'Courier New', Courier, monospace;
 
 $base-font-family: $mono;
-$header-font-family: 'brandon-grotesque', $helvetica;
+$header-font-family: 'omnes-pro', $helvetica;
 
 // Sizes
 ///////////////////////////////////////////////////////////////////////////////
@@ -24,6 +24,7 @@ $light-gray: #DDD;
 $light-red: #FBE3E4;
 $light-yellow: #FFF6BF;
 $light-green: #E6EFC2;
+$off-gray: #d6d6d6;
 
 // Body Color
 $base-body-color: white;
@@ -44,3 +45,12 @@ $base-border-color: $light-gray;
 $error-color: $light-red;
 $notice-color: $light-yellow;
 $success-color: $light-green;
+
+// animation
+$scroll-curve: cubic-bezier(0.7,0,0.3,1);
+
+// header stuff
+$bg-mask-size-top: 10%;
+$bg-mask-size-side: 7%;
+
+$header-left-width: 45%;

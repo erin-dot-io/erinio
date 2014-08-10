@@ -1,5 +1,19 @@
 $(document).ready(function() {
 
+  $.Velocity.RegisterUI('transition.flyUpIn', {
+      defaultDuration: 500,
+      calls: [
+        [{ translateY: [ 0, '100px' ], opacity: 1}, 1, { easing: 'easeOutQuint' }]
+      ]
+  });
+  $.Velocity.RegisterUI('transition.flyDownOut', {
+      defaultDuration: 200,
+      calls: [
+        [{ translateX: [ '-200px', 0 ], opacity: 0}, 1, { easing: 'easeInQuint' }]
+      ],
+      reset: { translateX: 0 }
+  });
+
   // detect if IE : from http://stackoverflow.com/a/16657946
   var ie = (function(){
     var undef,rv = -1; // Return value assumes failure.
@@ -68,7 +82,8 @@ $(document).ready(function() {
     noscroll,
     isAnimating,
     container = document.getElementById( 'container' ),
-    trigger = container.querySelector( 'button.trigger' );
+    trigger = container.querySelector( '.slide-trigger' ),
+    slideItem = container.querySelector( '.slide-in-item');
 
   function scrollY() {
     return window.pageYOffset || docElem.scrollTop;
@@ -105,11 +120,22 @@ $(document).ready(function() {
 
     if( reveal ) {
       classie.add( container, 'modify' );
+      $('.slide-in-item')
+        .velocity('transition.flyUpIn', {
+          stagger: 100,
+          visibility: 'visible',
+          delay: 400
+      });
     }
     else {
       noscroll = true;
       disable_scroll();
       classie.remove( container, 'modify' );
+      classie.remove( container, 'modify-refresh' );
+      $('.slide-in-item')
+        .velocity('transition.flyDownOut', {
+          visibility: 'hidden'
+      });
     }
 
     // simulating the end of the transition:
@@ -133,6 +159,12 @@ $(document).ready(function() {
     isRevealed = true;
     classie.add( container, 'notrans' );
     classie.add( container, 'modify' );
+    classie.add( container, 'modify-refresh' );
+    $('.slide-in-item')
+      .velocity('transition.flyUpIn', {
+        stagger: 100,
+        visibility: 'visible'
+    });
   }
 
   window.addEventListener( 'scroll', scrollPage );
