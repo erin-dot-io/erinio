@@ -182,8 +182,11 @@ body {
   .subline {
     font-family: $mono;
     padding-top: 25px;
-    @include media($phone-wide) {padding-top: 60px;}
-    @include media($phone) {padding-top: 45px;}
+    @include media($phone-wide) {
+      position: fixed;
+      bottom: 10px;
+      margin-bottom: 0;
+    }
   }
   // &.with-at h1:before {content: "@";}
   @include media($phone-wide) {
