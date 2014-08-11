@@ -6,7 +6,7 @@ $(document).ready(function() {
         [{ translateY: [ 0, '100px' ], opacity: 1}, 1, { easing: 'easeOutQuart' }]
       ]
   });
-  $.Velocity.RegisterUI('transition.flyDownOut', {
+  $.Velocity.RegisterUI('transition.flyLeftOut', {
       defaultDuration: 200,
       calls: [
         [{ translateX: [ '-200px', 0 ], opacity: 0}, 1, { easing: 'easeInQuint' }]
@@ -134,7 +134,7 @@ $(document).ready(function() {
       classie.remove( container, 'modify' );
       classie.remove( container, 'modify-refresh' );
       $('.slide-in-item')
-        .velocity('transition.flyDownOut');
+        .velocity('transition.flyLeftOut');
     }
 
     // simulating the end of the transition:

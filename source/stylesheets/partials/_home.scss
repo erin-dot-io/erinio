@@ -180,7 +180,10 @@ body {
     }
   }
   .subline {
-    padding-top: 10px;
+    font-family: $mono;
+    padding-top: 25px;
+    @include media($phone-wide) {padding-top: 60px;}
+    @include media($phone) {padding-top: 45px;}
   }
   // &.with-at h1:before {content: "@";}
   @include media($phone-wide) {
