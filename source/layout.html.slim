@@ -14,7 +14,7 @@ html class="no-js" lang="en"
     = javascript_include_tag  "all"
 
   body
-    .container.intro-effect-side#container
+    .top-container.intro-effect-side#top-container
       header.header
         .bg-canvas.slide-trigger
           / .bg-canvas__image style="background-image: url('http://cl.ly/image/0p0T062k2C08/IMG_0004.jpg')"
@@ -23,65 +23,66 @@ html class="no-js" lang="en"
           .bg-canvas__mask.mask--right
           .bg-canvas__mask.mask--bottom
           .bg-canvas__mask.mask--left
-        .header-overlay
-          .header-top-left
-            a.icon-instagram.trigger-erinautomatic href="http://www.instagram.com/erinautomatic" title="@erinautomatic"
-            a.icon-twitter.trigger-erinautomatic href="http://twitter.com/erinautomatic" title="@erinautomatic"
-            / a.icon-dribbble
-            a.icon-octoface.trigger-erinautomatic href="http://github.com/erinautomatic" title="@erinautomatic"
-            a.icon-code.trigger-erinautomatic href="http://gist.github.com/erinautomatic" title="@erinautomatic"
-            a.icon-paperplane.trigger-email href="mailto:erin+website@erin.io" title="hi"
-            a.icon-air.trigger-wavey.last href="https://vine.co/v/bF1wF9i5vmA" title="so wavey"
-            .header-title.title-alt.title-erinautomatic
-              .h1 erinautomatic
-            .header-title.title-alt.title-edk
-              .h1 edk
-            .header-title.title-alt.title-email
-              .h1 erin@erin.io
-            .header-title.title-alt.title-wavey
-              .h1 so wavey...
-            .header-title.title-name
-              h1.h1
-                ' Hello.
-                / wbr
-                / ' daniel
-                / wbr
-                / | keeffe
-          .header-content
-            h1.slide-in-item
-              | My name is Erin.
-            h3.slide-in-item
-              | I design things. I write code. <em>I like to get my hands dirty.</em>
-            p.slide-in-item
-              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. In explicabo optio obcaecati, nam non sed, quaerat aut odio at, deleniti, ipsa accusantium nihil molestias unde! Doloremque architecto blanditiis, numquam. Provident.
-
-            / p.subline Soon...
-      article.content
-        button.trigger data-info="Click to see the header effect"
-          span Trigger
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam repellat enim blanditiis, molestiae ut nisi hic sapiente ab recusandae mollitia debitis nulla, modi quibusdam vel maxime aut doloribus, laudantium laborum.
-
-
+    .header-overlay
+      .header-top-left
+        a.icon-instagram.trigger-erinautomatic href="http://www.instagram.com/erinautomatic"
+        a.icon-twitter.trigger-erinautomatic href="http://twitter.com/erinautomatic"
+        / a.icon-dribbble
+        a.icon-octoface.trigger-erinautomatic href="http://github.com/erinautomatic"
+        a.icon-code.trigger-erinautomatic href="http://gist.github.com/erinautomatic"
+        a.icon-paperplane.trigger-email href="mailto:erin+website@erin.io"
+        a.icon-air.trigger-wavey.last href="https://vine.co/v/bF1wF9i5vmA"
+        .header-title.title-alt.title-erinautomatic
+          .h1 erinautomatic
+        .header-title.title-alt.title-edk
+          .h1 edk
+        .header-title.title-alt.title-email
+          .h1 erin@erin.io
+        .header-title.title-alt.title-wavey
+          .h1 so wavey...
+        .header-title.title-name
+          h1.h1.no-wrap
+            ' erin is my
+            wbr
+            ' name
+            / wbr
+            / | keeffe
+      .header-content
+        h2.slide-in-item#hello
+          | Hello.
+        h3.slide-in-item#about-me
+          ' I design things.
+          wbr
+          span.no-wrap
+            ' I write code.
+          wbr
+          em.no-wrap
+            | I like to get my hands dirty.
+        p.slide-in-item
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. In explicabo optio obcaecati, nam non sed, quaerat aut odio at, deleniti, ipsa accusantium nihil molestias unde! Doloremque architecto blanditiis, numquam. Provident.
 
 
 
 
-    article.content
+
+    article.content.slide-in-item
 
       section#articles role="main"
-        = yield
+        .container
+          = yield
       aside
-        h2 Recent Articles
-        ol
-          - blog.articles[0...10].each do |article|
-            li
-              = link_to article.title, article
-              span= article.date.strftime('%b %e')
-        h2 Tags
-        ol
-          - blog.tags.each do |tag, articles|
-            li= link_to "#{tag} (#{articles.size})", tag_path(tag)
-        h2 By Year
-        ol
-          - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
-            li= link_to "#{year} (#{articles.size})", blog_year_path(year)
+        .container
+          h2 Recent Articles
+          ol
+            - blog.articles[0...10].each do |article|
+              li
+                = link_to article.title, article
+                span= article.date.strftime('%b %e')
+          h2 Tags
+          ol
+            - blog.tags.each do |tag, articles|
+              li= link_to "#{tag} (#{articles.size})", tag_path(tag)
+          h2 By Year
+          ol
+            - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
+              li= link_to "#{year} (#{articles.size})", blog_year_path(year)

@@ -2,16 +2,20 @@
 ///////////////////////////////////////////////////////////////////////////////
 $sans-serif: $helvetica;
 $serif: $georgia;
-$mono: 'courier-prime', 'Courier New', Courier, monospace;
+$mono: 'Courier New', Courier, monospace;
 
-$base-font-family: $mono;
-$header-font-family: 'omnes-pro', $helvetica;
+$base-font-family: 'ff-meta-serif-web-pro', $serif;
+$header-font-family: 'adelle-sans', $helvetica;
 
 // Sizes
 ///////////////////////////////////////////////////////////////////////////////
 $base-font-size: 1em;
-$base-line-height: $base-font-size * 1.5;
+$base-line-height: 1.5;
 $base-border-radius: em(3);
+
+$grid-padding-desktop: 40px;
+$grid-padding-tablet: 20px;
+$grid-padding-phone: 14px;
 
 // Colors
 ///////////////////////////////////////////////////////////////////////////////
@@ -25,12 +29,13 @@ $light-red: #FBE3E4;
 $light-yellow: #FFF6BF;
 $light-green: #E6EFC2;
 $off-gray: #d6d6d6;
+$warm-gray: #564d58;
 
 // Body Color
 $base-body-color: white;
 
 //  Font Colors
-$base-font-color: $dark-gray;
+$base-font-color: $warm-gray;
 $base-accent-color: $blue;
 $overlay-text-color: white;
 
@@ -53,4 +58,4 @@ $scroll-curve: cubic-bezier(0.7,0,0.3,1);
 $bg-mask-size-top: 10%;
 $bg-mask-size-side: 7%;
 
-$header-left-width: 45%;
+$header-left-width: 53%;

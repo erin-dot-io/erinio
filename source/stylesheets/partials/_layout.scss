@@ -1,0 +1,13 @@
+@import 'init';
+
+.container {
+  @include outer-container;
+  @include box-sizing(content-box);
+  padding: 0 $grid-padding-desktop;
+  @include media($tablet) {
+    padding: 0 $grid-padding-tablet;
+  }
+  @include media($phone-wide) {
+    padding: 0 $grid-padding-phone;
+  }
+}

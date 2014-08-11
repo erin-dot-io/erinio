@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
   $.Velocity.RegisterUI('transition.flyUpIn', {
-      defaultDuration: 500,
+      defaultDuration: 400,
       calls: [
-        [{ translateY: [ 0, '100px' ], opacity: 1}, 1, { easing: 'easeOutQuint' }]
+        [{ translateY: [ 0, '100px' ], opacity: 1}, 1, { easing: 'easeOutQuart' }]
       ]
   });
   $.Velocity.RegisterUI('transition.flyDownOut', {
@@ -61,9 +61,9 @@ $(document).ready(function() {
 
   function wheel(e) {
     // for IE
-    //if( ie ) {
-      //preventDefault(e);
-    //}
+    if( ie ) {
+      preventDefault(e);
+    }
   }
 
   function disable_scroll() {
@@ -81,7 +81,7 @@ $(document).ready(function() {
     isRevealed,
     noscroll,
     isAnimating,
-    container = document.getElementById( 'container' ),
+    container = document.getElementById( 'top-container' ),
     trigger = container.querySelector( '.slide-trigger' ),
     slideItem = container.querySelector( '.slide-in-item');
 
@@ -119,13 +119,14 @@ $(document).ready(function() {
     isAnimating = true;
 
     if( reveal ) {
+      if (!$(container).hasClass('modify')) {
+        $('.slide-in-item')
+          .velocity('transition.flyUpIn', {
+            stagger: 100,
+            delay: 400
+        });
+      }
       classie.add( container, 'modify' );
-      $('.slide-in-item')
-        .velocity('transition.flyUpIn', {
-          stagger: 100,
-          visibility: 'visible',
-          delay: 400
-      });
     }
     else {
       noscroll = true;
@@ -133,9 +134,7 @@ $(document).ready(function() {
       classie.remove( container, 'modify' );
       classie.remove( container, 'modify-refresh' );
       $('.slide-in-item')
-        .velocity('transition.flyDownOut', {
-          visibility: 'hidden'
-      });
+        .velocity('transition.flyDownOut');
     }
 
     // simulating the end of the transition:
@@ -162,8 +161,7 @@ $(document).ready(function() {
     classie.add( container, 'modify-refresh' );
     $('.slide-in-item')
       .velocity('transition.flyUpIn', {
-        stagger: 100,
-        visibility: 'visible'
+        stagger: 100
     });
   }
 

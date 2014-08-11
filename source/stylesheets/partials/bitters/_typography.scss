@@ -5,33 +5,38 @@ body {
   -webkit-font-smoothing: antialiased;
   line-height: $base-line-height;
   text-rendering: optimizeLegibility;
+  @include media($phone-wide) {font-size: $base-font-size / 1.2;}
 }
 
 h1, .h1, h2, h3, h4, h5, h6 {
   font-family: $header-font-family;
-  line-height: 1.25em;
+  line-height: 1.5;
+  font-weight: 300;
   margin: 0;
   text-rendering: optimizeLegibility; // Fix the character spacing for headings
+  &[id] {margin-bottom: .2em;}
 }
 
 h1, .h1 {
-  font-size: $base-font-size * 2.25; // 16 * 2.25 = 36px
+  font-size: $base-font-size * 3;
 }
 
 h2 {
-  font-size: $base-font-size * 2; // 16 * 2 = 32px
+  font-size: $base-font-size * 2.5;
+  font-weight: 800;
 }
 
 h3 {
-  font-size: $base-font-size * 1.75; // 16 * 1.75 = 28px
+  font-size: $base-font-size * 1.75;
+  font-weight: 100;
 }
 
 h4 {
-  font-size: $base-font-size * 1.5; // 16 * 1.5 = 24px
+  font-size: $base-font-size * 1.5;
 }
 
 h5 {
-  font-size: $base-font-size * 1.25; // 16 * 1.25 = 20px
+  font-size: $base-font-size * 1.25;
 }
 
 h6 {
@@ -40,6 +45,7 @@ h6 {
 
 p {
   margin: 0 0 ($base-line-height * .5);
+  font-size: $base-font-size * 1.35;
 }
 
 a {
