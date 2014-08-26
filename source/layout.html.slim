@@ -14,7 +14,7 @@ html class="no-js" lang="en"
     = javascript_include_tag  "all"
 
   body
-    .top-container.intro-effect-side
+    #top-container.top-container.intro-effect-side
       header.header
         .bg-canvas.slide-trigger
           / .bg-canvas__image style="background-image: url('http://cl.ly/image/0p0T062k2C08/IMG_0004.jpg')"
@@ -47,20 +47,22 @@ html class="no-js" lang="en"
             ' name
             / wbr
             / | keeffe
-        p.subline
-          small
-            strong Soon...
+        / p.subline
+        /   small
+        /     strong Soon...
       .header-content
         h2.slide-in-item#hello
           | Hello.
-        h3.slide-in-item#about-me
+        h3.slide-in-item.no-wrap#about-me
           ' I design things.
           wbr
-          span.no-wrap
-            ' I write code.
+          ' I write code.
+          br
+          em
+            ' I like to get my hands dirty
           wbr
-          em.no-wrap
-            | I like to get my hands dirty and learn new things.
+          em
+            | and learn new things.
         p.slide-in-item
           | Lorem ipsum dolor sit amet, consectetur adipisicing elit. In explicabo optio obcaecati, nam non sed, quaerat aut odio at, deleniti, ipsa accusantium nihil molestias unde! Doloremque architecto blanditiis, numquam. Provident.
 
