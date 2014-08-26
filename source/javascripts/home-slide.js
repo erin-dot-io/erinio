@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
   $.Velocity.RegisterUI('transition.flyUpIn', {
-      defaultDuration: 400,
+      defaultDuration: 600,
       calls: [
-        [{ translateY: [ 0, '100px' ], opacity: 1}, 1, { easing: 'easeOutQuart' }]
+        [{ translateZ: 0, translateY: [ 0, '100px' ], opacity: 1}, 1, { easing: 'easeOutQuart' }]
       ]
   });
   $.Velocity.RegisterUI('transition.flyLeftOut', {
