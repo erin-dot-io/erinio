@@ -6,12 +6,29 @@ $(document).ready(function() {
         [{ translateZ: 0, translateY: [ 0, '100px' ], opacity: 1}, 1, { easing: 'easeOutQuart' }]
       ]
   });
-  $.Velocity.RegisterUI('transition.flyLeftOut', {
+  $.Velocity.RegisterUI('transition.flyDownOut', {
       defaultDuration: 200,
       calls: [
-        [{ translateX: [ '-200px', 0 ], opacity: 0}, 1, { easing: 'easeInQuint' }]
-      ],
-      reset: { translateX: 0 }
+        [{ translateY: [ '200px', 0 ], opacity: 0}, 1, { easing: 'easeInQuint' }]
+      ]
+  });
+  $.Velocity.RegisterUI('transition.slideLeft', {
+      defaultDuration: 400,
+      calls: [
+        [{ translateZ: 0, translateX: '-60px' }, 1, { easing: 'easeInOutCubic' }]
+      ]
+  });
+  $.Velocity.RegisterUI('transition.slideRight', {
+      defaultDuration: 400,
+      calls: [
+        [{ translateZ: 0, translateX: '60px' }, 1, { easing: 'easeInOutCubic' }]
+      ]
+  });
+  $.Velocity.RegisterUI('transition.slideReset', {
+      defaultDuration: 400,
+      calls: [
+        [{ translateZ: 0, translateX: '0px' }, 1, { easing: 'easeInOutCubic' }]
+      ]
   });
 
   // detect if IE : from http://stackoverflow.com/a/16657946
@@ -83,7 +100,8 @@ $(document).ready(function() {
     isAnimating,
     container = document.getElementById( 'top-container' ),
     trigger = container.querySelector( '.slide-trigger' ),
-    slideItem = container.querySelector( '.slide-in-item');
+    triggerAlt = container.querySelector( '.splash-logo' ),
+    slideItem = container.querySelector( '.slide-in-item' );
 
   function scrollY() {
     return window.pageYOffset || docElem.scrollTop;
@@ -125,6 +143,20 @@ $(document).ready(function() {
             stagger: 100,
             delay: 400
         });
+        $('#nav-social-links .social-links__left a')
+          .velocity('transition.slideLeft', {
+            stagger: '50ms'
+        });
+        $('#nav-social-links .social-links__right a')
+          .velocity('transition.slideRight', {
+            stagger: '50ms',
+            backwards: true
+        });
+        $('#nav-logo')
+          .velocity('transition.flyUpIn', {
+            display: 'inline-block',
+            delay: '250ms'
+        });
       }
       classie.add( container, 'modify' );
     }
@@ -134,7 +166,20 @@ $(document).ready(function() {
       classie.remove( container, 'modify' );
       classie.remove( container, 'modify-refresh' );
       $('.slide-in-item')
-        .velocity('transition.flyLeftOut');
+        .velocity('transition.flyDownOut');
+      $('#nav-social-links .social-links__left a')
+        .velocity('transition.slideReset', {
+          delay: '200ms',
+          stagger: '50ms',
+          backwards: true
+      });
+      $('#nav-social-links .social-links__right a')
+        .velocity('transition.slideReset', {
+          delay: '200ms',
+          stagger: '50ms'
+      });
+      $('#nav-logo')
+        .velocity('transition.flyDownOut');
     }
 
     // simulating the end of the transition:
@@ -163,8 +208,24 @@ $(document).ready(function() {
       .velocity('transition.flyUpIn', {
         stagger: 100
     });
+    $('#nav-social-links .social-links__left a')
+      .velocity('transition.slideLeft', {
+        stagger: '50ms'
+    });
+    $('#nav-social-links .social-links__right a')
+      .velocity('transition.slideRight', {
+        stagger: '50ms',
+        backwards: true
+    });
+    $('#nav-logo')
+      .velocity('transition.flyUpIn', {
+        display: 'inline-block',
+        delay: '250ms'
+    });
   }
 
   window.addEventListener( 'scroll', scrollPage );
   trigger.addEventListener( 'click', function() { toggle( 'reveal' ); } );
+  // console.log(trigger);
+  triggerAlt.addEventListener( 'click', function() { toggle( 'reveal' ); } );
 });

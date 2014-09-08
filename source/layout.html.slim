@@ -3,7 +3,7 @@ html class="no-js" lang="en"
   head
     meta charset="utf-8"
     meta content="IE=edge;chrome=1" http-equiv="X-UA-Compatible"
-    meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"
+    meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     title
       | erin.io#{' - ' + current_article.title unless current_article.nil?}
     = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Erin Keeffe"
@@ -18,41 +18,51 @@ html class="no-js" lang="en"
       header.header
         .bg-canvas.slide-trigger
           / .bg-canvas__image style="background-image: url('http://cl.ly/image/0p0T062k2C08/IMG_0004.jpg')"
-          .bg-canvas__image style="background-image: url('http://cl.ly/image/3r013o1p1v44/IMG_0001.jpg')"
-          .bg-canvas__mask.mask--top
-          .bg-canvas__mask.mask--right
+          .bg-canvas__image style="background-image: url('images/bg-home/IMG_0005.jpg')"
+          / .bg-canvas__mask.mask--top
+          / .bg-canvas__mask.mask--right
           .bg-canvas__mask.mask--bottom
-          .bg-canvas__mask.mask--left
-    .header-overlay
-      .header-top-left
-        a.icon-instagram.trigger-erinautomatic href="http://www.instagram.com/erinautomatic"
-        a.icon-twitter.trigger-erinautomatic href="http://twitter.com/erinautomatic"
-        / a.icon-dribbble
-        a.icon-octoface.trigger-erinautomatic href="http://github.com/erinautomatic"
-        a.icon-code.trigger-erinautomatic href="http://gist.github.com/erinautomatic"
-        a.icon-paperplane.trigger-email href="mailto:erin+website@erin.io"
-        a.icon-air.trigger-wavey.last href="https://vine.co/v/bF1wF9i5vmA"
-        .header-title.title-alt.title-erinautomatic
-          .h1 erinautomatic
-        .header-title.title-alt.title-edk
-          .h1 edk
-        .header-title.title-alt.title-email
-          .h1 erin@erin.io
-        .header-title.title-alt.title-wavey
-          .h1 so wavey...
-        .header-title.title-name
-          h1.h1.no-wrap
-            ' erin is my
-            wbr
-            ' name
-            / wbr
-            / | keeffe
-        / p.subline
-        /   small
-        /     strong Soon...
-      .header-content
-        h2.slide-in-item#hello
-          | Hello.
+          / .bg-canvas__mask.mask--left
+        .header-overlay
+          .container
+            .header-top-left
+              .splash-logo
+                .splash-logo__inner
+                  img src="images/logo/erinio-logo-line-white.svg"
+              / .header-title.title-alt.title-erinautomatic
+              /   .h1 erinautomatic
+              / .header-title.title-alt.title-edk
+              /   .h1 edk
+              / .header-title.title-alt.title-email
+              /   .h1 erin@erin.io
+              / .header-title.title-alt.title-wavey
+              /   .h1 so wavey...
+              / .header-title.title-name
+              /   h1.h1.no-wrap
+              /     ' hello
+              /     wbr
+              /     ' there
+    .header-nav.nav-light
+      .header-nav__inner
+        .header-nav__valign
+          .nav-center-wrap
+            .container
+              .nav-social-links#nav-social-links
+                .social-links__left
+                  a.icon-instagram.trigger-erinautomatic href="http://www.instagram.com/erinautomatic"
+                  a.icon-twitter.trigger-erinautomatic href="http://twitter.com/erinautomatic"
+                  a.icon-octoface.trigger-erinautomatic href="http://github.com/erinautomatic"
+                .social-links__right
+                  a.icon-code.trigger-erinautomatic href="http://gist.github.com/erinautomatic"
+                  a.icon-paperplane.trigger-email href="mailto:erin+website@erin.io"
+                  a.icon-air.trigger-wavey.last href="https://vine.co/v/bF1wF9i5vmA"
+              .nav-logo#nav-logo
+                a href="/"
+                  img src="images/logo/erinio-logo-fill-white.svg"
+    .header-content
+      .container
+        / h2.slide-in-item#hello
+        /   | Hello.
         h3.slide-in-item.no-wrap#about-me
           ' I design things.
           wbr

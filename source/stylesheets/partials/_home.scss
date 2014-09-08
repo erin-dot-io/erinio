@@ -15,9 +15,6 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  @include media($desktop-narrow) {
-    position: absolute;
-  }
 }
 
 .bg-canvas {
@@ -31,36 +28,40 @@ body {
 .bg-canvas__image {
   @include position(absolute, 0px 0% 0px 0px);
   background-repeat: no-repeat;
-  background-position: bottom left;
+  background-position: bottom center;
   background-size: cover;
+  background-color: $warm-gray;
   // background-attachment: fixed;
   @include transition-property(opacity, transform);
   @include transition-duration(500ms);
   @include transition-timing-function($scroll-curve);
   opacity: 0.75;
   .modify & {opacity: 1;}
-  @include media($desktop-narrow) {
-    .modify & {@include transform(translateY(-70%));}
-  }
-  @include media($phone-wide) {
-    .modify & {@include transform(translateY(-80%));}
-  }
 }
 
 .bg-canvas__mask {
   position: absolute;
-  background-color: white;
+  background-color: rgba(#fff, .95);
   @include transition-property(all);
   @include transition-duration(500ms);
   @include transition-timing-function($scroll-curve);
-  .modify.modify-refresh & {@include transition-duration(0ms);}
+  &:after {
+    content: "";
+    @include position(absolute, 70% 0px 0px 0px);
+    @include linear-gradient(rgba(#fff, 0), #fff);
+  }
+  .modify.modify-refresh & {
+    @include transition-duration(0ms);
+  }
 }
+
+$mask-border-width-desktop : 12px;
 
 .mask--top {
   top: 0px;
   left: 0px;
   right: 0px;
-  height: $bg-mask-size-top;
+  height: $mask-border-width-desktop;
   @include transform(translateY(-100%));
   .modify & {@include transform(translateY(0))}
 }
@@ -68,7 +69,7 @@ body {
   top: 0px;
   right: 0px;
   bottom: 0px;
-  width: $bg-mask-size-side;
+  width: $mask-border-width-desktop;
   @include transform(translateX(100%));
   .modify & {@include transform(translateX(0))}
 }
@@ -76,61 +77,46 @@ body {
   bottom: 0px;
   left: 0px;
   right: 0px;
-  height: $bg-mask-size-top;
+  height: $nav-height-desktop;
   @include transform(translateY(100%));
-  .modify & {@include transform(translateY(0))}
+  .modify & {
+    @include transform(translateY(0));
+    // opacity: 0.93;
+  }
+  @include media($phone) {
+    height: $nav-height-phone;
+  }
 }
 .mask--left {
   top: 0px;
   bottom: 0px;
   left: 0px;
-  width: $header-left-width + 12;
+  width: $mask-border-width-desktop;
   @include transform(translateX(-100%));
   .modify & {@include transform(translateX(0))}
 }
 
-@include media($desktop-narrow) {
-  .mask--top    {height:  $grid-padding-desktop;}
-  .mask--right  {width:   $grid-padding-desktop;}
-  .mask--bottom {display: none;}
-  .mask--left   {width:   $grid-padding-desktop;}
-}
-
-@include media($phone-wide) {
-  .mask--top    {height:  0;}
-  .mask--right  {width:   0;}
-  .mask--bottom {display: none;}
-  .mask--left   {width:   0;}
-}
-
 .header-overlay {
-  @include position(absolute, $bg-mask-size-top 0 0 $bg-mask-size-side);
-  width: $header-left-width;
-  @include media($desktop-narrow) {
-    position: relative;
-    width: auto;
-    left: inherit;
-    right: inherit;
-    padding: 0 $grid-padding-desktop;
-  }
-  @include media($phone-wide) {
-    padding: 0 $grid-padding-phone;
+  position: absolute;
+  top: 15%;
+  width: 100%;
+  @include media($phone) {
+    top: 0;
   }
 }
 
 .header-top-left {
   position: relative;
-  @include transition-property(color, transform, top);
+  cursor: s-resize;
+  @include transition-property(color, transform, opacity);
   @include transition-duration(500ms);
   @include transition-timing-function($scroll-curve);
   color: $overlay-text-color;
-  // @include transform(translateY(300px));
-  .modify ~ .header-overlay & {
-    color: $base-font-color;
-    // top: $bg-mask-size-top;
-    // @include transform(translateY(0));
+  @include transform(translateY(120px));
+  .modify & {
+    @include transform(translateY(0));
+    opacity: 0;
   }
-  .header-title {margin-top: -20px;}
   .h1 {
     display: inline;
     font-family: $base-font-family;
@@ -145,66 +131,18 @@ body {
     //   left: -100px;
     // }
   }
-  a {
+}
+
+.splash-logo {
+  text-align: center;
+  .splash-logo__inner {
     display: inline-block;
-    position: relative;
-    z-index: 10;
-    width: 36px;
-    top: 65px;
-    color: $overlay-text-color;
-    cursor: pointer;
-    opacity: .8;
-    @include transition(color 500ms $scroll-curve);
-    .modify ~ .header-overlay &  {color: $base-font-color}
-    &:last-child {margin-right: 0;}
-  }
-  .no-touch & {
-    a:hover {
+    width: 256px;
+    opacity: 0.9;
+    &:hover {
       opacity: 1;
-       ~ .title-name {display: none;}
-    }
-    .trigger-erinautomatic {
-      &:hover {
-        ~ .title-erinautomatic {display: block;}
-      }
-    }
-    .trigger-email {
-      &:hover {
-        ~ .title-email {display: block;}
-      }
-    }
-    .trigger-wavey {
-      &:hover {
-        ~ .title-wavey {display: block;}
-      }
     }
   }
-  .subline {
-    font-family: $mono;
-    padding-top: 25px;
-    @include media($phone-wide) {
-      position: fixed;
-      bottom: 10px;
-      margin-bottom: 0;
-    }
-  }
-  // &.with-at h1:before {content: "@";}
-  @include media($phone-wide) {
-    a {
-      font-size: 22px;
-      margin-right: 10px;
-      top: 75px;
-    }
-  }
-  @include media($phone) {
-    .h1 {font-size: $base-font-size * 2.25;}
-    a {
-      top: 80px;
-    }
-  }
-  // @include media($netbook-13) {
-  //   @include transform(translateY(0px));
-  // }
 }
 
 .title-alt {display: none;}
@@ -218,23 +156,78 @@ body {
   .modify & {cursor: default;}
 }
 
-.header-content {
-  padding-top: 20%;
-  @include media($netbook-13) {
-    padding-top: 10%;
-  }
-  @include media($netbook-11) {
-    padding-top: 4%;
-  }
-  @include media($desktop-narrow) {
-    padding-top: 70px;
-  }
-  @include media($phone-wide) {
-    padding-top: 90px;
+.header-nav {
+  @include position(absolute, 0px 0px $nav-height-desktop 0px);
+  &.nav-light {
+    a {color: #fff}
   }
   @include media($phone) {
-    padding-top: 60px;
+    bottom: $nav-height-phone;
   }
+}
+
+.header-nav__inner {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.header-nav__valign {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.nav-social-links {
+  @include clearfix;
+  position: relative;
+  margin: 0 auto;
+  max-width: em(400);
+  top: 2px;
+  a {
+    padding: 10px 15px;
+    margin-right: 10px;
+    display: inline-block;
+    opacity: 0.8;
+    &:last-child {margin-right: 0;}
+    &:hover {opacity: 1;}
+  }
+}
+
+.social-links__left,
+.social-links__right {
+  width: 50%;
+}
+
+.social-links__left {
+  float: left;
+  text-align: right;
+  padding-right: 5px;
+}
+
+.social-links__right {
+  float: right;
+  text-align: left;
+  padding-left: 5px;
+}
+
+$nav-logo-size : 64px;
+
+.nav-logo {
+  @include position(absolute, 50% 0 0 0);
+  display: inline-block;
+  width: $nav-logo-size;
+  margin-top: -($nav-logo-size / 2);
+  margin-left: -($nav-logo-size / 2);
+  display: none;
+  a {
+    opacity: 0.9;
+    &:hover {opacity: 1;}
+  }
+}
+
+.header-content {
+  @include position(absolute, 40% 0px 0 0px);
 }
 
 .slide-in-item {
@@ -244,14 +237,5 @@ body {
 
 .content {
   position: relative;
-}
-
-@include media($desktop-narrow) {
-  .header-overlay, .content {top: $bg-mask-size-top * 3.7;}
-}
-@include media($phone-wide) {
-  .header-overlay, .content {top: $bg-mask-size-top * 2.5;}
-}
-@include media($phone) {
-  .header-overlay, .content {top: $bg-mask-size-top * 2.3;}
+  top: -14%;
 }
