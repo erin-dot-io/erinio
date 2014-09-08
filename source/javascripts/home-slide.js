@@ -25,7 +25,7 @@ $(document).ready(function() {
       ]
   });
   $.Velocity.RegisterUI('transition.slideReset', {
-      defaultDuration: 400,
+      defaultDuration: 600,
       calls: [
         [{ translateZ: 0, translateX: '0px' }, 1, { easing: 'easeInOutCubic' }]
       ]
@@ -169,13 +169,13 @@ $(document).ready(function() {
         .velocity('transition.flyDownOut');
       $('#nav-social-links .social-links__left a')
         .velocity('transition.slideReset', {
-          delay: '200ms',
+          // delay: '200ms',
           stagger: '50ms',
           backwards: true
       });
       $('#nav-social-links .social-links__right a')
         .velocity('transition.slideReset', {
-          delay: '200ms',
+          // delay: '200ms',
           stagger: '50ms'
       });
       $('#nav-logo')
