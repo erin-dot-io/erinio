@@ -41,7 +41,7 @@ body {
 
 .bg-canvas__mask {
   position: absolute;
-  background-color: rgba(#fff, .95);
+  background-color: rgba(#fff, .9);
   @include transition-property(all);
   @include transition-duration(500ms);
   @include transition-timing-function($scroll-curve);
