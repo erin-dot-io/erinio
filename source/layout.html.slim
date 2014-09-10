@@ -85,7 +85,7 @@ html class="no-js" lang="en"
             ' I like to get my hands dirty
           wbr
           em
-            | and learn new things.
+            | and learn some shit.
         p.slide-in-item
           | Lorem ipsum dolor sit amet, consectetur adipisicing elit. In explicabo optio obcaecati, nam non sed, quaerat aut odio at, deleniti, ipsa accusantium nihil molestias unde! Doloremque architecto blanditiis, numquam. Provident.
 
@@ -98,19 +98,19 @@ html class="no-js" lang="en"
       section#articles role="main"
         .container
           = yield
-      aside
-        .container
-          h2 Recent Articles
-          ol
-            - blog.articles[0...10].each do |article|
-              li
-                = link_to article.title, article
-                span= article.date.strftime('%b %e')
-          h2 Tags
-          ol
-            - blog.tags.each do |tag, articles|
-              li= link_to "#{tag} (#{articles.size})", tag_path(tag)
-          h2 By Year
-          ol
-            - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
-              li= link_to "#{year} (#{articles.size})", blog_year_path(year)
+      / aside
+      /   .container
+      /     h2 Recent Articles
+      /     ol
+      /       - blog.articles[0...10].each do |article|
+      /         li
+      /           = link_to article.title, article
+      /           span= article.date.strftime('%b %e')
+          / h2 Tags
+          / ol
+          /   - blog.tags.each do |tag, articles|
+          /     li= link_to "#{tag} (#{articles.size})", tag_path(tag)
+          / h2 By Year
+          / ol
+          /   - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
+          /     li= link_to "#{year} (#{articles.size})", blog_year_path(year)
