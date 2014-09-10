@@ -10,6 +10,19 @@ html class="no-js" lang="en"
     script src="//use.typekit.net/lrp5xzb.js" type="text/javascript"
     javascript:
       try{Typekit.load();}catch(e){}
+    javascript:
+      WebFontConfig = {
+        google: { families: [ 'Montserrat:700,400:latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
     = stylesheet_link_tag "all"
     = javascript_include_tag  "all"
 
