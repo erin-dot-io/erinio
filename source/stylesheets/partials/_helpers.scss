@@ -7,3 +7,15 @@
 .left {float: left;}
 
 .right {float: right;}
+
+.css-cols-3 {
+  font-size: $base-font-size;
+  @include column-count(3);
+  @include column-width(200px);
+  // @include column-gap(30px);
+  // text-align: justify;
+}
+
+.text-subtle {
+  color: rgba($base-font-color, 0.75);
+}

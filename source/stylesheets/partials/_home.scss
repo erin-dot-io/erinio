@@ -41,14 +41,14 @@ body {
 
 .bg-canvas__mask {
   position: absolute;
-  background-color: rgba(#fff, .9);
+  background-color: #fff;
   @include transition-property(all);
   @include transition-duration(500ms);
   @include transition-timing-function($scroll-curve);
   &:after {
     content: "";
     @include position(absolute, 70% 0px 0px 0px);
-    @include linear-gradient(rgba(#fff, 0), #fff);
+    // @include linear-gradient(rgba(#fff, 0), #fff);
   }
   .modify.modify-refresh & {
     @include transition-duration(0ms);
@@ -119,12 +119,6 @@ $mask-border-width-desktop : 12px;
   }
   .h1 {
     display: inline;
-    font-family: $base-font-family;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 8px;
-    font-style: italic;
-    font-size: $base-font-size * 3;
     line-height: .9;
     // &:before {
     //   position: absolute;
@@ -135,6 +129,7 @@ $mask-border-width-desktop : 12px;
 
 .splash-logo {
   text-align: center;
+  @include tap-highlight;
   .splash-logo__inner {
     display: inline-block;
     width: 256px;
@@ -153,6 +148,7 @@ $mask-border-width-desktop : 12px;
 
 .slide-trigger {
   cursor: s-resize;
+  @include tap-highlight;
   .modify & {cursor: default;}
 }
 
@@ -228,6 +224,19 @@ $nav-logo-size : 64px;
 
 .header-content {
   @include position(absolute, 40% 0px 0 0px);
+  text-align: center;
+  @include media($phone-wide) {
+    top: 24%;
+  }
+}
+
+.icon--more {
+  margin-top: $base-font-size * 3;
+  font-size: 48px;
+  color: rgba($base-font-color, 0.2);
+  @include media($phone-wide) {
+    margin-top: $base-font-size;
+  }
 }
 
 .slide-in-item {
@@ -237,5 +246,5 @@ $nav-logo-size : 64px;
 
 .content {
   position: relative;
-  top: -14%;
+  // top: -5%;
 }

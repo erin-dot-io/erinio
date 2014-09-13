@@ -10,19 +10,19 @@ html class="no-js" lang="en"
     script src="//use.typekit.net/lrp5xzb.js" type="text/javascript"
     javascript:
       try{Typekit.load();}catch(e){}
-    javascript:
-      WebFontConfig = {
-        google: { families: [ 'Montserrat:700,400:latin' ] }
-      };
-      (function() {
-        var wf = document.createElement('script');
-        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-        wf.type = 'text/javascript';
-        wf.async = 'true';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(wf, s);
-      })();
+    / javascript:
+    /   WebFontConfig = {
+    /     google: { families: [ 'Montserrat:700,400:latin' ] }
+    /   };
+    /   (function() {
+    /     var wf = document.createElement('script');
+    /     wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+    /       '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    /     wf.type = 'text/javascript';
+    /     wf.async = 'true';
+    /     var s = document.getElementsByTagName('script')[0];
+    /     s.parentNode.insertBefore(wf, s);
+    /   })();
     = stylesheet_link_tag "all"
     = javascript_include_tag  "all"
 
@@ -39,6 +39,7 @@ html class="no-js" lang="en"
         .header-overlay
           .container
             .header-top-left
+              / h1 Hello there
               .splash-logo
                 .splash-logo__inner
                   img src="images/logo/erinio-logo-line-white.svg"
@@ -68,26 +69,34 @@ html class="no-js" lang="en"
                 .social-links__right
                   a.icon-code.trigger-erinautomatic href="http://gist.github.com/erinautomatic"
                   a.icon-paperplane.trigger-email href="mailto:erin+website@erin.io"
-                  a.icon-air.trigger-wavey.last href="https://vine.co/v/bF1wF9i5vmA"
+                  a.icon-waves.trigger-wavey.last href="https://vine.co/v/bF1wF9i5vmA"
               .nav-logo#nav-logo
                 a href="/"
                   img src="images/logo/erinio-logo-fill-white.svg"
     .header-content
-      .container
-        / h2.slide-in-item#hello
-        /   | Hello.
-        h3.slide-in-item.no-wrap#about-me
-          ' I design things.
-          wbr
-          ' I write code.
+      .container.narrow
+        h1.slide-in-item#hello
+          | Hello
+        p.slide-in-item.no-wrap
+          | My name is Erin. <wbr> I design things. I write code.
           br
-          em
-            ' I like to get my hands dirty
-          wbr
-          em
-            | and learn some shit.
-        p.slide-in-item
-          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. In explicabo optio obcaecati, nam non sed, quaerat aut odio at, deleniti, ipsa accusantium nihil molestias unde! Doloremque architecto blanditiis, numquam. Provident.
+          | I try to help people and technology <wbr> get along.
+          br
+          br
+          small.text-subtle
+            | But wouldn't you rather just <wbr> see what I've been up to?
+        .icon--more.icon-arrow-down2.slide-in-item
+          / | In May of 2010 I moved to Brooklyn with nothing but a couple duffle bags, a few hundred dollars
+        / h3.slide-in-item.no-wrap#about-me
+        /   ' I design things.
+        /   wbr
+        /   ' I write code.
+        /   br
+        /   em
+        /     ' I like to get my hands dirty
+        /   wbr
+        /   em
+        /     | and learn some shit.
 
 
 

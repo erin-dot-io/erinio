@@ -25,3 +25,6 @@ gem "middleman-livereload", "~> 3.1.0"
 
 # heroku build stuff
 gem 'rack-contrib'
+
+# Blog summaries
+gem 'nokogiri'
