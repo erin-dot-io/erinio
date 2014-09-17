@@ -15,13 +15,13 @@ $(document).ready(function() {
   $.Velocity.RegisterUI('transition.slideLeft', {
       defaultDuration: 400,
       calls: [
-        [{ translateZ: 0, translateX: '-60px' }, 1, { easing: 'easeInOutCubic' }]
+        [{ translateZ: 0, translateX: '-100%' }, 1, { easing: 'easeInOutCubic' }]
       ]
   });
   $.Velocity.RegisterUI('transition.slideRight', {
       defaultDuration: 400,
       calls: [
-        [{ translateZ: 0, translateX: '60px' }, 1, { easing: 'easeInOutCubic' }]
+        [{ translateZ: 0, translateX: '100%' }, 1, { easing: 'easeInOutCubic' }]
       ]
   });
   $.Velocity.RegisterUI('transition.slideReset', {

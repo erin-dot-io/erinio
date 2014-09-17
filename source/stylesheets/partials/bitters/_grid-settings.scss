@@ -20,6 +20,7 @@ $phone-wide          : new-breakpoint(max-width 639px);
 $phone-wide-only     : new-breakpoint(min-width 480px max-width 639px);
 $phone               : new-breakpoint(max-width 479px);
 $not-phone           : new-breakpoint(min-width 480px);
+$phone-short         : new-breakpoint(max-height 320px);
 $netbook-11          : new-breakpoint(max-height 600px);
 $netbook-13          : new-breakpoint(max-height 790px);
 $ratio-small         : new-breakpoint(min-width 1670px max-height 639px);

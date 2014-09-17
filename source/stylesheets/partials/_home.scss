@@ -15,6 +15,8 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
+  background-color: $off-gray;
+  overflow: hidden;
 }
 
 .bg-canvas {
@@ -22,7 +24,7 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  // background-color: $off-gray;
+  background-color: #fff;
 }
 
 .bg-canvas__image {
@@ -41,14 +43,14 @@ body {
 
 .bg-canvas__mask {
   position: absolute;
-  background-color: #fff;
+  background-color: rgba(#fff, .9);
   @include transition-property(all);
   @include transition-duration(500ms);
   @include transition-timing-function($scroll-curve);
   &:after {
     content: "";
     @include position(absolute, 70% 0px 0px 0px);
-    // @include linear-gradient(rgba(#fff, 0), #fff);
+    @include linear-gradient(rgba(#fff, 0), #fff);
   }
   .modify.modify-refresh & {
     @include transition-duration(0ms);
@@ -83,6 +85,12 @@ $mask-border-width-desktop : 12px;
     @include transform(translateY(0));
     // opacity: 0.93;
   }
+  @include media($netbook-11) {
+    height: $nav-height-netbook-11;
+  }
+  @include media($phone-short) {
+    height: $nav-height-phone-short;
+  }
   @include media($phone) {
     height: $nav-height-phone;
   }
@@ -100,8 +108,11 @@ $mask-border-width-desktop : 12px;
   position: absolute;
   top: 15%;
   width: 100%;
+  @include media($phone-short) {
+    top: -18%;
+  }
   @include media($phone) {
-    top: 0;
+    top: 6%;
   }
 }
 
@@ -138,6 +149,11 @@ $mask-border-width-desktop : 12px;
       opacity: 1;
     }
   }
+  @include media($phone-wide) {
+    .splash-logo__inner {
+      width: 180px;
+    }
+  }
 }
 
 .title-alt {display: none;}
@@ -156,6 +172,12 @@ $mask-border-width-desktop : 12px;
   @include position(absolute, 0px 0px $nav-height-desktop 0px);
   &.nav-light {
     a {color: #fff}
+  }
+  @include media($netbook-11) {
+    bottom: $nav-height-netbook-11;
+  }
+  @include media($phone-short) {
+    bottom: $nav-height-phone-short;
   }
   @include media($phone) {
     bottom: $nav-height-phone;
@@ -188,45 +210,57 @@ $mask-border-width-desktop : 12px;
     &:last-child {margin-right: 0;}
     &:hover {opacity: 1;}
   }
-}
+  .social-links__left,
+  .social-links__right {
+    width: 50%;
+  }
+  .social-links__left {
+    float: left;
+    text-align: right;
+    padding-right: 5px;
+  }
+  .social-links__right {
+    float: right;
+    text-align: left;
+    padding-left: 5px;
+  }
+  @include media($phone) {
+    a {
+      padding: 10px 12px;
+      margin-right: 0;
+    }
+    .social-links__left {padding-right: 0;}
+    .social-links__right {padding-left: 0;}
+  }
 
-.social-links__left,
-.social-links__right {
-  width: 50%;
 }
-
-.social-links__left {
-  float: left;
-  text-align: right;
-  padding-right: 5px;
-}
-
-.social-links__right {
-  float: right;
-  text-align: left;
-  padding-left: 5px;
-}
-
-$nav-logo-size : 64px;
 
 .nav-logo {
   @include position(absolute, 50% 0 0 0);
   display: inline-block;
-  width: $nav-logo-size;
-  margin-top: -($nav-logo-size / 2);
-  margin-left: -($nav-logo-size / 2);
+  width: $nav-logo-size-desktop;
+  margin-top: -($nav-logo-size-desktop / 2);
+  margin-left: -($nav-logo-size-desktop / 2);
   display: none;
   a {
     opacity: 0.9;
     &:hover {opacity: 1;}
   }
+  @include media($phone) {
+    width: $nav-logo-size-phone;
+    margin-top: -($nav-logo-size-phone / 2);
+    margin-left: -($nav-logo-size-phone / 2);
+  }
 }
 
 .header-content {
-  @include position(absolute, 40% 0px 0 0px);
+  @include position(absolute, $mask-height-desktop 0px 0 0px);
   text-align: center;
-  @include media($phone-wide) {
-    top: 24%;
+  @include media($netbook-11) {
+    top: $mask-height-netbook-11;
+  }
+  @include media($phone-short) {
+    top: $mask-height-phone-short;
   }
 }
 
@@ -234,8 +268,11 @@ $nav-logo-size : 64px;
   margin-top: $base-font-size * 3;
   font-size: 48px;
   color: rgba($base-font-color, 0.2);
-  @include media($phone-wide) {
+  @include media($netbook-11) {
     margin-top: $base-font-size;
+  }
+  @include media($phone) {
+    margin-top: 10px;
   }
 }
 
@@ -247,4 +284,7 @@ $nav-logo-size : 64px;
 .content {
   position: relative;
   // top: -5%;
+  @include media($phone-short) {
+    bottom: -130px;
+  }
 }

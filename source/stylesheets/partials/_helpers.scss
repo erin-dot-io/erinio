@@ -19,3 +19,16 @@
 .text-subtle {
   color: rgba($base-font-color, 0.75);
 }
+
+.wf-loading .fade, .fade {
+  @include transition-property(opacity, transform);
+  @include transition-duration(1000ms);
+  @include transition-timing-function(ease);
+  opacity: 0;
+  @include transform(translateZ(0) scale(1.05));
+}
+
+.wf-active .fade, .wf-inactive .fade, {
+  opacity: 1;
+  @include transform(translateZ(0) scale(1));
+}

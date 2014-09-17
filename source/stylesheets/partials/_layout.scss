@@ -14,3 +14,29 @@
     padding: 0 $grid-padding-phone;
   }
 }
+
+.video {
+  position: relative;
+  margin: 0 (-($grid-padding-desktop * 2));
+  .video__inner {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+  }
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  @include media($desktop-narrow) {
+    margin: 0 (-($grid-padding-desktop));
+  }
+  @include media($tablet) {
+    margin: 0 (-($grid-padding-tablet));
+  }
+  @include media($phone-wide) {
+    margin: 0 (-($grid-padding-phone));
+  }
+}

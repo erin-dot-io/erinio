@@ -29,7 +29,7 @@ $light-gray: #DDD;
 $light-red: #FBE3E4;
 $light-yellow: #FFF6BF;
 $light-green: #E6EFC2;
-$off-gray: #d6d6d6;
+$off-gray: #d7d2d3;
 $warm-gray: #564d58;
 
 // Body Color
@@ -60,6 +60,16 @@ $bg-mask-size-top: 10%;
 $bg-mask-size-side: 7%;
 
 $nav-height-desktop: 86%;
+$nav-height-netbook-11: 80%;
+$nav-height-phone-short: 76%;
 $nav-height-phone: 82%;
 
+$mask-height-desktop: 40%;
+$mask-height-netbook-11: 100% - $nav-height-netbook-11 + 10%;
+$mask-height-phone-short: 100% - $nav-height-phone-short + 10%;
+$mask-height-phone: 100% - $nav-height-phone + 10%;
+
 $header-left-width: 53%;
+
+$nav-logo-size-desktop : 64px;
+$nav-logo-size-phone : 54px;
