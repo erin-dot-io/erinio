@@ -29,7 +29,7 @@ html class="no-js" lang="en"
   body
     #top-container.top-container.intro-effect-side
       header.header
-        .bg-canvas.slide-trigger.fade
+        .bg-canvas.slide-trigger.fade-bg-canvas
           / .bg-canvas__image style="background-image: url('http://cl.ly/image/0p0T062k2C08/IMG_0004.jpg')"
           .bg-canvas__image style="background-image: url('images/bg-home/IMG_0005.jpg')"
           / .bg-canvas__mask.mask--top
@@ -40,7 +40,7 @@ html class="no-js" lang="en"
           .container
             .header-top-left
               / h1 Hello there
-              .splash-logo
+              .splash-logo.fade
                 .splash-logo__inner
                   img src="images/logo/erinio-logo-line-white.svg"
               / .header-title.title-alt.title-erinautomatic
@@ -75,6 +75,8 @@ html class="no-js" lang="en"
                   img src="images/logo/erinio-logo-fill-white.svg"
     .header-content
       .container.narrow
+        / #toggle-up.toggle-up.slide-in-item
+        /   h2 toggle up
         h1.slide-in-item#hello
           | Hello
         p.slide-in-item.no-wrap
@@ -107,11 +109,10 @@ html class="no-js" lang="en"
 
 
 
-    article.content.slide-in-item
+    article.content
 
       section#articles role="main"
-        .container
-          = yield
+        = yield
       / aside
       /   .container
       /     h2 Recent Articles

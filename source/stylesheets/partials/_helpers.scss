@@ -22,13 +22,30 @@
 
 .wf-loading .fade, .fade {
   @include transition-property(opacity, transform);
-  @include transition-duration(1000ms);
+  @include transition-duration(1200ms);
   @include transition-timing-function(ease);
   opacity: 0;
-  @include transform(translateZ(0) scale(1.05));
+  @include transform(translateY(-10px));
 }
 
 .wf-active .fade, .wf-inactive .fade, {
   opacity: 1;
-  @include transform(translateZ(0) scale(1));
+  @include transform(translateY(0px));
+}
+
+.fade-bg-canvas {
+  .top-container:not(.notrans) & {
+    @include transition-property(opacity, transform);
+    @include transition-duration(1000ms);
+    @include transition-timing-function(ease);
+    opacity: 0;
+    @include transform(translateZ(0) scale(1.05));
+  }
+}
+
+.fade-bg-canvas-loaded {
+  .top-container:not(.notrans) & {
+    opacity: 1;
+    @include transform(translateZ(0) scale(1));
+  }
 }

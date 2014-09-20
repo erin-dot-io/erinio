@@ -29,32 +29,34 @@ body {
 
 .bg-canvas__image {
   @include position(absolute, 0px 0% 0px 0px);
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  background-size: cover;
+  @include background-cover(bottom);
   background-color: $warm-gray;
   // background-attachment: fixed;
-  @include transition-property(opacity, transform);
-  @include transition-duration(500ms);
-  @include transition-timing-function($scroll-curve);
+  .top-container:not(.notrans) & {
+    @include transition-property(opacity, transform);
+    @include transition-duration(500ms);
+    @include transition-timing-function($scroll-curve);
+  }
   opacity: 0.75;
-  .modify & {opacity: 1;}
+  .modify:not(.notrans) & {opacity: 1;}
 }
 
 .bg-canvas__mask {
   position: absolute;
   background-color: rgba(#fff, .9);
-  @include transition-property(all);
-  @include transition-duration(500ms);
-  @include transition-timing-function($scroll-curve);
+  .top-container:not(.notrans) & {
+    @include transition-property(all);
+    @include transition-duration(500ms);
+    @include transition-timing-function($scroll-curve);
+  }
   &:after {
     content: "";
     @include position(absolute, 70% 0px 0px 0px);
     @include linear-gradient(rgba(#fff, 0), #fff);
   }
-  .modify.modify-refresh & {
-    @include transition-duration(0ms);
-  }
+  // .modify:not(.notrans) & {
+  //   @include transition-duration(0ms);
+  // }
 }
 
 $mask-border-width-desktop : 12px;
@@ -65,7 +67,7 @@ $mask-border-width-desktop : 12px;
   right: 0px;
   height: $mask-border-width-desktop;
   @include transform(translateY(-100%));
-  .modify & {@include transform(translateY(0))}
+  .modify:not(.notrans) & {@include transform(translateY(0))}
 }
 .mask--right {
   top: 0px;
@@ -73,7 +75,7 @@ $mask-border-width-desktop : 12px;
   bottom: 0px;
   width: $mask-border-width-desktop;
   @include transform(translateX(100%));
-  .modify & {@include transform(translateX(0))}
+  .modify:not(.notrans) & {@include transform(translateX(0))}
 }
 .mask--bottom {
   bottom: 0px;
@@ -101,7 +103,7 @@ $mask-border-width-desktop : 12px;
   left: 0px;
   width: $mask-border-width-desktop;
   @include transform(translateX(-100%));
-  .modify & {@include transform(translateX(0))}
+  .modify:not(.notrans) & {@include transform(translateX(0))}
 }
 
 .header-overlay {
@@ -119,12 +121,14 @@ $mask-border-width-desktop : 12px;
 .header-top-left {
   position: relative;
   cursor: s-resize;
-  @include transition-property(color, transform, opacity);
-  @include transition-duration(500ms);
-  @include transition-timing-function($scroll-curve);
+  .top-container:not(.notrans) & {
+    @include transition-property(color, transform, opacity);
+    @include transition-duration(500ms);
+    @include transition-timing-function($scroll-curve);
+  }
   color: $overlay-text-color;
   @include transform(translateY(120px));
-  .modify & {
+  .modify:not(.notrans) & {
     @include transform(translateY(0));
     opacity: 0;
   }
@@ -165,7 +169,7 @@ $mask-border-width-desktop : 12px;
 .slide-trigger {
   cursor: s-resize;
   @include tap-highlight;
-  .modify & {cursor: default;}
+  .modify:not(.notrans) & {cursor: default;}
 }
 
 .header-nav {
@@ -232,12 +236,14 @@ $mask-border-width-desktop : 12px;
     .social-links__left {padding-right: 0;}
     .social-links__right {padding-left: 0;}
   }
-
+  .final-state & {
+    .social-links__left a {@include transform(translateX(-100%));}
+    .social-links__right a {@include transform(translateX(100%));}
+  }
 }
 
 .nav-logo {
   @include position(absolute, 50% 0 0 0);
-  display: inline-block;
   width: $nav-logo-size-desktop;
   margin-top: -($nav-logo-size-desktop / 2);
   margin-left: -($nav-logo-size-desktop / 2);
@@ -250,6 +256,9 @@ $mask-border-width-desktop : 12px;
     width: $nav-logo-size-phone;
     margin-top: -($nav-logo-size-phone / 2);
     margin-left: -($nav-logo-size-phone / 2);
+  }
+  .final-state & {
+    display: inline-block;
   }
 }
 
@@ -276,10 +285,16 @@ $mask-border-width-desktop : 12px;
   }
 }
 
-.slide-in-item {
-  opacity: 0;
-  display: none;
-}
+// .slide-in-item {
+//   html:not(.no-js) & {
+//     opacity: 0;
+//     display: none;
+//   }
+// }
+
+// .toggle-up {
+//   cursor: n-resize;
+// }
 
 .content {
   position: relative;

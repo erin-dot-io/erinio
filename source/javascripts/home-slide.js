@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  $('.slide-in-item').hide();
+
   $.Velocity.RegisterUI('transition.flyUpIn', {
       defaultDuration: 600,
       calls: [
@@ -15,19 +17,25 @@ $(document).ready(function() {
   $.Velocity.RegisterUI('transition.slideLeft', {
       defaultDuration: 400,
       calls: [
-        [{ translateZ: 0, translateX: '-100%' }, 1, { easing: 'easeInOutCubic' }]
+        [{ translateZ: 0, translateX: [ '-100%', 0 ] }, 1, { easing: 'easeInOutCubic' }]
       ]
   });
   $.Velocity.RegisterUI('transition.slideRight', {
       defaultDuration: 400,
       calls: [
-        [{ translateZ: 0, translateX: '100%' }, 1, { easing: 'easeInOutCubic' }]
+        [{ translateZ: 0, translateX: [ '100%', 0 ] }, 1, { easing: 'easeInOutCubic' }]
       ]
   });
-  $.Velocity.RegisterUI('transition.slideReset', {
+  $.Velocity.RegisterUI('transition.slideLeftReset', {
       defaultDuration: 600,
       calls: [
-        [{ translateZ: 0, translateX: '0px' }, 1, { easing: 'easeInOutCubic' }]
+        [{ translateZ: 0, translateX: [ 0, '-100%' ] }, 1, { easing: 'easeInOutCubic' }]
+      ]
+  });
+  $.Velocity.RegisterUI('transition.slideRightReset', {
+      defaultDuration: 600,
+      calls: [
+        [{ translateZ: 0, translateX: [ 0, '100%' ] }, 1, { easing: 'easeInOutCubic' }]
       ]
   });
 
@@ -50,6 +58,9 @@ $(document).ready(function() {
     return ((rv > -1) ? rv : undef);
   }());
 
+  var swipeEl = document.body;
+  var mc = new Hammer(swipeEl);
+  mc.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
 
   // disable/enable scroll (mousewheel and keys) from http://stackoverflow.com/a/4770179
   // left: 37, up: 38, right: 39, down: 40,
@@ -118,6 +129,7 @@ $(document).ready(function() {
 
     if( classie.has( container, 'notrans' ) ) {
       classie.remove( container, 'notrans' );
+      console.log('removed notrans');
       return false;
     }
 
@@ -136,8 +148,10 @@ $(document).ready(function() {
   function toggle( reveal ) {
     isAnimating = true;
 
-    if( reveal ) {
-      if (!$(container).hasClass('modify')) {
+    if ( reveal ) {
+      classie.add( container, 'modify' );
+      mc.get('swipe').set({ enable: false });
+      if(!( classie.has( container, 'notrans' ) )) {
         $('.slide-in-item')
           .velocity('transition.flyUpIn', {
             stagger: 100,
@@ -158,29 +172,53 @@ $(document).ready(function() {
             delay: '250ms'
         });
       }
-      classie.add( container, 'modify' );
     }
     else {
       noscroll = true;
       disable_scroll();
       classie.remove( container, 'modify' );
-      classie.remove( container, 'modify-refresh' );
+      mc.get('swipe').set({ enable: true });
       $('.slide-in-item')
         .velocity('transition.flyDownOut');
       $('#nav-social-links .social-links__left a')
-        .velocity('transition.slideReset', {
+        .velocity('transition.slideLeftReset', {
           // delay: '200ms',
           stagger: '50ms',
           backwards: true
       });
       $('#nav-social-links .social-links__right a')
-        .velocity('transition.slideReset', {
+        .velocity('transition.slideRightReset', {
           // delay: '200ms',
           stagger: '50ms'
       });
       $('#nav-logo')
-        .velocity('transition.flyDownOut');
+        .velocity('transition.flyDownOut', {
+          complete: function() {
+            $('.header-nav').removeClass('final-state');
+          }
+        });
     }
+
+    // $('#toggle-up').mousedown(function() {
+    //   noscroll = true;
+    //   disable_scroll();
+    //   classie.remove( container, 'modify' );
+    //   $('.slide-in-item')
+    //     .velocity('transition.flyDownOut');
+    //   $('#nav-social-links .social-links__left a')
+    //     .velocity('transition.slideLeftReset', {
+    //       // delay: '200ms',
+    //       stagger: '50ms',
+    //       backwards: true
+    //   });
+    //   $('#nav-social-links .social-links__right a')
+    //     .velocity('transition.slideRightReset', {
+    //       // delay: '200ms',
+    //       stagger: '50ms'
+    //   });
+    //   $('#nav-logo')
+    //     .velocity('transition.flyDownOut');
+    // });
 
     // simulating the end of the transition:
     setTimeout( function() {
@@ -190,7 +228,7 @@ $(document).ready(function() {
         noscroll = false;
         enable_scroll();
       }
-    }, 600 );
+    }, 1000 );
   }
 
   // refreshing the page...
@@ -202,30 +240,38 @@ $(document).ready(function() {
   if( pageScroll ) {
     isRevealed = true;
     classie.add( container, 'notrans' );
+    console.log('added notrans');
     classie.add( container, 'modify' );
-    classie.add( container, 'modify-refresh' );
-    $('.slide-in-item')
-      .velocity('transition.flyUpIn', {
-        stagger: 100
-    });
-    $('#nav-social-links .social-links__left a')
-      .velocity('transition.slideLeft', {
-        stagger: '50ms'
-    });
-    $('#nav-social-links .social-links__right a')
-      .velocity('transition.slideRight', {
-        stagger: '50ms',
-        backwards: true
-    });
-    $('#nav-logo')
-      .velocity('transition.flyUpIn', {
-        display: 'inline-block',
-        delay: '250ms'
-    });
+    $('.slide-in-item').show();
+    $('.header-nav').addClass('final-state');
+    mc.get('swipe').set({ enable: false });
+    // classie.add( container, 'modify-refresh' );
+    // if (!(container.hasClass('notrans'))) {
+    //   $('.slide-in-item')
+    //     .velocity('transition.flyUpIn', {
+    //       stagger: 100
+    //   });
+    //   $('#nav-social-links .social-links__left a')
+    //     .velocity('transition.slideLeft', {
+    //       stagger: '50ms'
+    //   });
+    //   $('#nav-social-links .social-links__right a')
+    //     .velocity('transition.slideRight', {
+    //       stagger: '50ms',
+    //       backwards: true
+    //   });
+    //   $('#nav-logo')
+    //     .velocity('transition.flyUpIn', {
+    //       display: 'inline-block',
+    //       delay: '250ms'
+    //   });
+    // }
   }
 
   window.addEventListener( 'scroll', scrollPage );
   trigger.addEventListener( 'click', function() { toggle( 'reveal' ); } );
   // console.log(trigger);
   triggerAlt.addEventListener( 'click', function() { toggle( 'reveal' ); } );
+  mc.on("swipeup", function() { toggle( 'reveal' ); } );
+
 });
