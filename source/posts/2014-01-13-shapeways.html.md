@@ -1,6 +1,6 @@
 ---
 title: Shapeways
-date: 2014-01-14
+date: 2014-01-13
 tags: portfolio
 ---
 
