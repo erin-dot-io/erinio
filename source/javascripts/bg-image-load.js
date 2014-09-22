@@ -11,5 +11,6 @@ $(document).ready(function() {
   $('.fade-bg-canvas').waitForImages(function() {
       // All descendant images have loaded, now slide up.
       $(this).addClass('fade-bg-canvas-loaded');
+      $('.fade-with-bg').addClass('fade-with-bg-loaded');
   });
 });

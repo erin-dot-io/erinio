@@ -20,7 +20,7 @@
   color: rgba($base-font-color, 0.75);
 }
 
-.wf-loading .fade, .fade {
+.wf-loading .fade-text, .fade-text {
   @include transition-property(opacity, transform);
   @include transition-duration(1200ms);
   @include transition-timing-function(ease);
@@ -28,7 +28,7 @@
   @include transform(translateY(-10px));
 }
 
-.wf-active .fade, .wf-inactive .fade, {
+.wf-active .fade-text, .wf-inactive .fade-text, {
   opacity: 1;
   @include transform(translateY(0px));
 }
@@ -48,4 +48,17 @@
     opacity: 1;
     @include transform(translateZ(0) scale(1));
   }
+}
+
+.fade-with-bg {
+  @include transition-property(opacity, transform);
+  @include transition-duration(1200ms);
+  @include transition-timing-function(ease);
+  opacity: 0;
+  @include transform(translateY(-10px));
+}
+
+.fade-with-bg-loaded {
+  opacity: 1;
+  @include transform(translateY(0px));
 }
