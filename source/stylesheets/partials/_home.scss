@@ -43,50 +43,34 @@ body {
 
 .bg-canvas__mask {
   position: absolute;
-  background-color: rgba(#fff, .9);
-  .top-container:not(.notrans) & {
-    @include transition-property(all);
-    @include transition-duration(500ms);
-    @include transition-timing-function($scroll-curve);
-  }
+  background-color: rgba(#fff, 0.9);
+  opacity: 0;
+  display: none;
+  // .top-container:not(.notrans) & {
+  //   @include transition-property(transform, opacity);
+  //   @include transition-duration(400ms);
+  //   @include transition-delay(100ms);
+  //   @include transition-timing-function(ease);
+  //   @include transform(translateY(80px));
+  // }
   &:after {
     content: "";
     @include position(absolute, 70% 0px 0px 0px);
     @include linear-gradient(rgba(#fff, 0), #fff);
   }
   // .modify:not(.notrans) & {
-  //   @include transition-duration(0ms);
+  //   @include transform(translateY(0px));
+  //   opacity: 1;
   // }
 }
 
 $mask-border-width-desktop : 12px;
 
-.mask--top {
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  height: $mask-border-width-desktop;
-  @include transform(translateY(-100%));
-  .modify:not(.notrans) & {@include transform(translateY(0))}
-}
-.mask--right {
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  width: $mask-border-width-desktop;
-  @include transform(translateX(100%));
-  .modify:not(.notrans) & {@include transform(translateX(0))}
-}
 .mask--bottom {
   bottom: 0px;
   left: 0px;
   right: 0px;
   height: $nav-height-desktop;
-  @include transform(translateY(100%));
-  .modify & {
-    @include transform(translateY(0));
-    // opacity: 0.93;
-  }
   @include media($netbook-11) {
     height: $nav-height-netbook-11;
   }
@@ -108,14 +92,8 @@ $mask-border-width-desktop : 12px;
 
 .header-overlay {
   position: absolute;
-  top: 15%;
+  top: 50%;
   width: 100%;
-  @include media($phone-short) {
-    top: -18%;
-  }
-  @include media($phone) {
-    top: 6%;
-  }
 }
 
 .header-top-left {
@@ -127,9 +105,9 @@ $mask-border-width-desktop : 12px;
     @include transition-timing-function($scroll-curve);
   }
   color: $overlay-text-color;
-  @include transform(translateY(120px));
+  @include transform(translateY(-128px));
   .modify:not(.notrans) & {
-    @include transform(translateY(0));
+    @include transform(translateY(-192px));
     opacity: 0;
   }
   .h1 {
@@ -140,6 +118,12 @@ $mask-border-width-desktop : 12px;
     //   left: -100px;
     // }
   }
+  @include media($phone-wide) {
+    @include transform(translateY(-90px));
+    .modify:not(.notrans) & {
+      @include transform(translateY(-160px));
+    }
+  }
 }
 
 .splash-logo {
@@ -148,10 +132,7 @@ $mask-border-width-desktop : 12px;
   .splash-logo__inner {
     display: inline-block;
     width: 256px;
-    opacity: 0.9;
-    &:hover {
-      opacity: 1;
-    }
+    opacity: 1;
   }
   @include media($phone-wide) {
     .splash-logo__inner {

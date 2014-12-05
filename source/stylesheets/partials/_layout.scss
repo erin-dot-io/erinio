@@ -5,13 +5,13 @@
   @include box-sizing(content-box);
   padding: 0 $grid-padding-desktop;
   &.narrow {
-    max-width: em(468);
+    max-width: 38em;
   }
   @include media($tablet) {
     padding: 0 $grid-padding-tablet;
   }
   @include media($phone-wide) {
-    padding: 0 $grid-padding-phone;
+    padding: 0 $grid-padding-phone * 2;
   }
 }
 

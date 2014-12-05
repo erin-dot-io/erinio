@@ -16,7 +16,7 @@ $desktop-narrow      : new-breakpoint(max-width 1000px);
 $desktop-narrow-only : new-breakpoint(min-width 769px max-width 1000px);
 $tablet              : new-breakpoint(max-width 768px);
 $tablet-only         : new-breakpoint(min-width 640px max-width 768px);
-$phone-wide          : new-breakpoint(max-width 639px);
+$phone-wide          : new-breakpoint(max-width 669px);
 $phone-wide-only     : new-breakpoint(min-width 480px max-width 639px);
 $phone               : new-breakpoint(max-width 479px);
 $not-phone           : new-breakpoint(min-width 480px);

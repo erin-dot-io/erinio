@@ -51,6 +51,10 @@ h6 {
 p {
   margin: 0 0 ($base-line-height * .5);
   font-size: $base-font-size * 1.25;
+  i {
+    position: relative;
+    top: .1em;
+  }
 }
 
 a {
