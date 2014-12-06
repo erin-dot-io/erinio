@@ -28,3 +28,6 @@ gem 'rack-contrib'
 
 # Blog summaries
 gem 'nokogiri'
+
+# Tubrolinks
+gem "turbolinks", require: false
