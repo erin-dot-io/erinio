@@ -1,6 +1,6 @@
 body {
   color: $base-font-color;
-  font-family: $title-font-family;
+  font-family: $base-font-family;
   font-size: $base-font-size;
   -webkit-font-smoothing: antialiased;
   line-height: $base-line-height;
@@ -9,12 +9,9 @@ body {
 }
 
 h1, .h1, h2, h3, h4, h5, h6 {
-  font-family: $title-font-family;
+  font-family: $header-font-family;
   line-height: 1.5;
-  font-weight: 300;
-  font-style: italic;
   letter-spacing: 1px;
-  text-transform: uppercase;
   margin: 0;
   text-rendering: optimizeLegibility; // Fix the character spacing for headings
   &[id] {margin-bottom: .2em;}
@@ -22,18 +19,15 @@ h1, .h1, h2, h3, h4, h5, h6 {
 
 h1, .h1 {
   font-size: $base-font-size * 3.25;
-  line-height: 1;
   color: lighten($base-font-color, 8)
 }
 
 h2 {
   font-size: $base-font-size * 2.25;
-  // font-weight: 600;
 }
 
 h3 {
   font-size: $base-font-size * 1.75;
-  // font-weight: 100;
 }
 
 h4 {

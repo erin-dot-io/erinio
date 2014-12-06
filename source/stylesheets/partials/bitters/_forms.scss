@@ -85,6 +85,7 @@ select {
 }
 
 button,
+a.button,
 input[type="submit"] {
   @extend %button;
   @include appearance(none);

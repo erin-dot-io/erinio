@@ -1,0 +1,11 @@
+@import 'init';
+
+.summary-img {
+  position: relative;
+  padding-bottom: 41.7%;
+  @include background-cover;
+  @include media($phone) {
+    padding-bottom: 0;
+    height: 200px;
+  }
+}

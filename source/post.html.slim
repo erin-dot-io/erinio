@@ -28,8 +28,12 @@ html class="no-js" lang="en"
 
   body
     article
-      main#articles role="main"
-        = yield
+      main#post role="main"
+        - if current_article.data.img?
+          .summary-img style="background-image: url('#{current_article.data.img}')"
+        .container
+          a href="/" ← Home
+          = yield
 
 
     aside

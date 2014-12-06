@@ -4,9 +4,8 @@ $sans-serif: $helvetica;
 $serif: $georgia;
 $mono: 'Courier New', Courier, monospace;
 
-$base-font-family: 'nimbus-sans', $serif;
-$header-font-family: 'freight-display-pro', $helvetica;
-$title-font-family: 'ff-meta-serif-web-pro', $serif;
+$base-font-family: $serif;
+$header-font-family: $helvetica;
 
 // Sizes
 ///////////////////////////////////////////////////////////////////////////////
