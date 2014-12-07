@@ -107,3 +107,13 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+
+# config/environments/staging.rb
+
+# MyApp::Application.configure do
+#   config.middleware.insert_after(::Rack::Runtime, "::Rack::Auth::Basic", "Staging") do |u, p|
+#     [u, p] == ['username', 'password']
+#   end
+
+#   #... other config
+# end
