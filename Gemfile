@@ -35,4 +35,4 @@ gem 'nokogiri'
 gem "rake"
 
 # Turbolinks
-gem "turbolinks", require: false
+# gem "turbolinks", require: false
