@@ -12,7 +12,7 @@ activate :blog do |blog|
   # Matcher for blog source files
   blog.sources = "posts/{year}-{month}-{day}-{title}.html"
   # blog.taglink = "tags/{tag}.html"
-  blog.layout = "post_layout"
+  # blog.layout = "post_layout"
   blog.summary_separator = /(READMORE)/
   # blog.summary_length = 250
   # blog.year_link = "{year}.html"
@@ -30,7 +30,7 @@ activate :blog do |blog|
 end
 
 page "/feed.xml", layout: false
-page "posts/*", :layout => :post_layout
+page "posts/*", :layout => :article_layout
 
 ###
 # Compass
@@ -89,8 +89,8 @@ set :build_dir, 'tmp'
 
 activate :directory_indexes
 
-set :markdown_engine, :redcarpet
-set :markdown, :fenced_code_blocks => true, :smartypants => true
+# set :markdown_engine, :redcarpet
+# set :markdown, :fenced_code_blocks => true, :smartypants => true
 
 configure :development do
   activate :livereload
