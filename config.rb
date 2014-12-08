@@ -8,11 +8,11 @@ activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
   # blog.prefix = "blog"
 
-  # blog.permalink = "{year}/{month}/{day}/{title}.html"
+  blog.permalink = "posts/{year}/{month}/{day}/{title}.html"
   # Matcher for blog source files
   blog.sources = "posts/{year}-{month}-{day}-{title}.html"
   # blog.taglink = "tags/{tag}.html"
-  # blog.layout = "layouts/post"
+  blog.layout = "post_layout"
   blog.summary_separator = /(READMORE)/
   # blog.summary_length = 250
   # blog.year_link = "{year}.html"
@@ -30,6 +30,7 @@ activate :blog do |blog|
 end
 
 page "/feed.xml", layout: false
+page "posts/*", :layout => :post_layout
 
 ###
 # Compass
@@ -86,6 +87,7 @@ set :images_dir, 'images'
 
 set :build_dir, 'tmp'
 
+activate :directory_indexes
 configure :development do
   activate :livereload
 end
