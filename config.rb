@@ -104,8 +104,6 @@ configure :build do
   # Use relative URLs
   activate :relative_assets
 
-  serve_static_assets = true
-
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
