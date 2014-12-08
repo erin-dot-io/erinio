@@ -31,6 +31,3 @@ gem 'nokogiri'
 
 # Tubrolinks
 gem "turbolinks", require: false
-
-# 12factor?
-gem "rails_12factor"
