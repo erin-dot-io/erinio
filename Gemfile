@@ -31,5 +31,8 @@ gem 'rack-contrib'
 # Blog summaries
 gem 'nokogiri'
 
+# Rake
+gem "rake"
+
 # Turbolinks
-# gem "turbolinks", require: false
+gem "turbolinks", require: false
