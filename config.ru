@@ -3,6 +3,7 @@ require 'middleman/rack'
 
 run Middleman.server
 
+require 'rack'
 require 'rack/contrib/try_static'
 
 use Rack::Deflater
