@@ -32,4 +32,4 @@ gem 'rack-contrib'
 gem 'nokogiri'
 
 # Tubrolinks
-gem "turbolinks", require: false
+# gem "turbolinks", require: false
