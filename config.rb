@@ -89,8 +89,8 @@ set :build_dir, 'tmp'
 
 activate :directory_indexes
 
-# set :markdown_engine, :redcarpet
-# set :markdown, :fenced_code_blocks => true, :smartypants => true
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true
 
 configure :development do
   activate :livereload
