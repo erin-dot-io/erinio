@@ -27,9 +27,8 @@ html class="no-js" lang="en"
     = javascript_include_tag  "all"
 
   body
-    article
-      main#articles role="main"
-        = yield
+    main.content role="main"
+      = yield
 
 
     aside

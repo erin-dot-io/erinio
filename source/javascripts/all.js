@@ -2,6 +2,6 @@
 
 //= require_tree ./plugins
 
-//= require_tree .
-
 //= require turbolinks
+
+//= require_tree .

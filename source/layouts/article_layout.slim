@@ -1,10 +1,9 @@
 = wrap_layout :layout do
   article
-    main#post role="main"
-      - if current_article.data.img?
-        .summary-img style="background-image: url('#{current_article.data.img}')"
-      .container
-        h1
-          = current_article.data.title
-        a href="/" ← Home
-        = yield
+    - if current_article.data.img?
+      .summary-img style="background-image: url('#{current_article.data.img}')"
+    .container
+      h1
+        = current_article.data.title
+      a href="/" ← Home
+      = yield
