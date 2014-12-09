@@ -1,0 +1,84 @@
+@import 'init';
+
+$nav-padding-desktop      : 20px;
+$nav-trigger-size-desktop : 44px;
+$nav-overlay-init-size    : 4px;
+$nav-overlay-pos-desktop  : ($nav-trigger-size-desktop / 2) - ($nav-overlay-init-size / 2);
+
+.cd-nav-trigger {
+  @include position(fixed, $nav-padding-desktop $nav-padding-desktop null null);
+  height: $nav-trigger-size-desktop;
+  width: $nav-trigger-size-desktop;
+  z-index: 5;
+  // image replacement
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background-color: red;
+  cursor: pointer;
+}
+
+.cd-icon {
+  @include position(absolute, 50% auto auto 50%);
+  display: inline-block;
+  width: 18px;
+  height: 2px;
+  background-color: #fff;
+  z-index: 10;
+  @include transform(translate(-50%, -50%) rotate(0deg));
+  @include animation(allBarsUp 200ms ease);
+  @include animation-fill-mode(forwards);
+  // @include transition(transform 600ms ease);
+  &:before, &:after {
+    content: " ";
+    @include position(absolute, 0 0 null null);
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    // @include transition(transform 300ms ease);
+  }
+  &:before {
+    @include transform(translateY(-6px) rotate(0deg));
+    @include animation(bottomBarUp 400ms ease);
+    @include animation-fill-mode(forwards);
+  }
+  &:after {
+    @include transform(translateY(6px) rotate(0deg));
+    @include animation(topBarUp 400ms ease);
+    @include animation-fill-mode(forwards);
+  }
+  .close-nav & {
+    background-color: rgba(#fff, 0);
+    @include animation(allBarsUp 200ms ease);
+    @include animation-fill-mode(forwards);
+    @include transform(translate(-50%, -50%) rotate(90deg));
+    &:before, &:after {background-color: #fff;}
+    &:before {
+      @include animation(bottomBarUp 400ms ease);
+      @include animation-fill-mode(forwards);
+      @include transform(translateY(0) rotate(45deg));
+    }
+    &:after {
+      @include animation(topBarUp 400ms ease);
+      @include animation-fill-mode(forwards);
+      @include transform(translateY(0) rotate(-45deg));
+    }
+  }
+}
+
+// containers of the 2 main rounded backgrounds
+// - these containers are used to position the rounded bgs behind the menu icon
+.cd-overlay-nav, .cd-overlay-content {
+  @include position(fixed, $nav-padding-desktop $nav-padding-desktop null null);
+  height: $nav-overlay-init-size;
+  width: $nav-overlay-init-size;
+  @include transform(translate(-($nav-overlay-pos-desktop), $nav-overlay-pos-desktop));
+  background-color: black;
+  span {
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    will-change: transform;
+    transform: scale(0);
+  }
+}

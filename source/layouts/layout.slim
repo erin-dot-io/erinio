@@ -5,7 +5,7 @@ html class="no-js" lang="en"
     meta content="IE=edge;chrome=1" http-equiv="X-UA-Compatible"
     meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     title
-      | erin.io#{' - ' + current_article.title unless current_article.nil?}
+      | #{current_article.title + ' - ' unless current_article.nil?}erin.io
     = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Erin Keeffe"
     script src="//use.typekit.net/lrp5xzb.js" type="text/javascript"
     javascript:
@@ -27,6 +27,7 @@ html class="no-js" lang="en"
     = javascript_include_tag  "all"
 
   body
+    = partial "nav"
     main.content role="main"
       = yield
 

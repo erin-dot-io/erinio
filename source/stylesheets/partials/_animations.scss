@@ -10,3 +10,69 @@
     // @include transform(translateY(0px));
   }
 }
+
+@include keyframes(bottomBar) {
+  0% {
+    @include transform(translateY(-6px) rotate(0deg));
+  }
+  50% {
+    @include transform(translateY(0px) rotate(0deg));
+  }
+  100% {
+    @include transform(translateY(0px) rotate(45deg));
+  }
+}
+
+@include keyframes(topBar) {
+  0% {
+    @include transform(translateY(6px) rotate(0deg));
+  }
+  50% {
+    @include transform(translateY(0px) rotate(0deg));
+  }
+  100% {
+    @include transform(translateY(0px) rotate(-45deg));
+  }
+}
+
+@include keyframes(allBars) {
+  from {
+    @include transform(translate(-50%, -50%) rotate(0deg));
+  }
+  to {
+    @include transform(translate(-50%, -50%) rotate(90deg));
+  }
+}
+
+@include keyframes(bottomBarUp) {
+  0% {
+    @include transform(translateY(0px) rotate(45deg));
+  }
+  50% {
+    @include transform(translateY(0px) rotate(0deg));
+  }
+  100% {
+    @include transform(translateY(-6px) rotate(0deg));
+  }
+}
+
+@include keyframes(topBarUp) {
+  0% {
+    @include transform(translateY(0px) rotate(-45deg));
+  }
+  50% {
+    @include transform(translateY(0px) rotate(0deg));
+  }
+  100% {
+    @include transform(translateY(6px) rotate(0deg));
+  }
+}
+
+@include keyframes(allBarsUp) {
+  from {
+    @include transform(translate(-50%, -50%) rotate(90deg));
+  }
+  to {
+    @include transform(translate(-50%, -50%) rotate(0deg));
+  }
+}
