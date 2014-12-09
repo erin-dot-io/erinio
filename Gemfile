@@ -36,7 +36,7 @@ gem "rake"
 
 # Turbolinks
 # gem "jquery-turbolinks"
-# gem "turbolinks", require: false
+gem "turbolinks", require: false
 
 # Markdown parsing
 gem "redcarpet"
