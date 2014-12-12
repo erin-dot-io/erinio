@@ -14,8 +14,37 @@ $nav-overlay-pos-desktop  : ($nav-trigger-size-desktop / 2) - ($nav-overlay-init
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
-  background-color: red;
   cursor: pointer;
+  &:before, &:after {
+    content: " ";
+    @include position(absolute, 0 null null 0);
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    @include transition-property(transform);
+  }
+  &:before {
+    background-color: #091d23;
+    @include transform(scale(1));
+    @include transition-duration(300ms);
+    @include transition-delay(400ms);
+  }
+  &:after {
+    background-color: $base-body-color;
+    @include transform(scale(0));
+    @include transition-duration(0ms);
+    @include transition-delay(0ms);
+  }
+  &.close-nav {
+    // user clicks on the .cd-nav-trigger element - 1st rounded background disappears
+    &:before {@include transform(scale(0));}
+    // user clicks on the .cd-nav-trigger element - 2nd rounded background appears
+    &:after {
+      @include transform(scale(1));
+      @include transition-duration(300ms);
+      @include transition-delay(400ms);
+    }
+  }
 }
 
 .cd-icon {
@@ -26,43 +55,23 @@ $nav-overlay-pos-desktop  : ($nav-trigger-size-desktop / 2) - ($nav-overlay-init
   background-color: #fff;
   z-index: 10;
   @include transform(translate(-50%, -50%) rotate(0deg));
-  @include animation(allBarsUp 200ms ease);
-  @include animation-fill-mode(forwards);
-  // @include transition(transform 600ms ease);
+  @include transition(transform 400ms ease);
   &:before, &:after {
     content: " ";
     @include position(absolute, 0 0 null null);
     width: 100%;
     height: 100%;
     background-color: inherit;
-    // @include transition(transform 300ms ease);
+    @include transition(transform 300ms ease);
   }
-  &:before {
-    @include transform(translateY(-6px) rotate(0deg));
-    @include animation(bottomBarUp 400ms ease);
-    @include animation-fill-mode(forwards);
-  }
-  &:after {
-    @include transform(translateY(6px) rotate(0deg));
-    @include animation(topBarUp 400ms ease);
-    @include animation-fill-mode(forwards);
-  }
+  &:before {@include transform(translateY(-6px) rotate(0deg));}
+  &:after {@include transform(translateY(6px) rotate(0deg));}
   .close-nav & {
     background-color: rgba(#fff, 0);
-    @include animation(allBarsUp 200ms ease);
-    @include animation-fill-mode(forwards);
-    @include transform(translate(-50%, -50%) rotate(90deg));
+    @include transform(translate(-50%, -50%) rotate(180deg));
     &:before, &:after {background-color: #fff;}
-    &:before {
-      @include animation(bottomBarUp 400ms ease);
-      @include animation-fill-mode(forwards);
-      @include transform(translateY(0) rotate(45deg));
-    }
-    &:after {
-      @include animation(topBarUp 400ms ease);
-      @include animation-fill-mode(forwards);
-      @include transform(translateY(0) rotate(-45deg));
-    }
+    &:before {@include transform(translateY(0) rotate(45deg));}
+    &:after {@include transform(translateY(0) rotate(-45deg));}
   }
 }
 
@@ -74,11 +83,49 @@ $nav-overlay-pos-desktop  : ($nav-trigger-size-desktop / 2) - ($nav-overlay-init
   width: $nav-overlay-init-size;
   @include transform(translate(-($nav-overlay-pos-desktop), $nav-overlay-pos-desktop));
   background-color: black;
-  span {
-    display: inline-block;
-    position: absolute;
-    border-radius: 50%;
-    will-change: transform;
-    transform: scale(0);
+  &.is-hidden {
+    @include transition(visibility 0s .3s, opacity .3s 0s);
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.cd-overlay-nav {
+  z-index: 2;
+}
+
+.cd-overlay-content {
+  z-index: 4;
+}
+
+.overlay-mask {
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  will-change: transform;
+  transform: scale(0);
+  .cd-overlay-nav & {
+    background-color: $blue;
+  }
+  .cd-overlay-content & {
+    background-color: $base-body-color;
+  }
+}
+
+.cd-primary-nav {
+  @include position(fixed, 0 0 0 0);
+  padding: 5%;
+  background-color: $blue;
+  z-index: 3;
+  -webkit-overflow-scrolling: touch;
+  // animate
+  @include transition(visibility 0ms, opacity 300ms);
+  visibility: hidden;
+  opacity: 0;
+  a {color: #000;}
+  &.fade-in {
+    visibility: visible;
+    opacity: 1;
   }
 }

@@ -27,9 +27,9 @@ html class="no-js" lang="en"
     = javascript_include_tag  "all"
 
   body
-    = partial "nav"
-    main.content role="main"
+    main.content.cd-content role="main"
       = yield
+    = partial "nav"
 
 
     aside
