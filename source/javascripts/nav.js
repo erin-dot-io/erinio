@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).on("page:update", function() {
   var overlayNav = $('.cd-overlay-nav'),
     overlayContent = $('.cd-overlay-content'),
     toggleNav = $('.cd-nav-trigger'),
