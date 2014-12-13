@@ -15,6 +15,7 @@ $nav-overlay-pos-desktop  : ($nav-trigger-size-desktop / 2) - ($nav-overlay-init
   text-indent: 100%;
   white-space: nowrap;
   cursor: pointer;
+  @include tap-highlight;
   &:before, &:after {
     content: " ";
     @include position(absolute, 0 null null 0);
@@ -38,16 +39,16 @@ $nav-overlay-pos-desktop  : ($nav-trigger-size-desktop / 2) - ($nav-overlay-init
   &.close-nav {
     // user clicks on the .cd-nav-trigger element - 1st rounded background disappears
     &:before {
-      @include transform(scale(0));
-      @include transition-duration(500ms);
+      @include transform(scale(0.9));
+      @include transition-duration(300ms);
       @include transition-delay(0ms);
-      @include transition-timing-function(ease-in-out);
+      @include transition-timing-function($easeInOutQuint);
     }
     // user clicks on the .cd-nav-trigger element - 2nd rounded background appears
     &:after {
       @include transform(scale(1));
       @include transition-duration(300ms);
-      @include transition-delay(350ms);
+      @include transition-delay(400ms);
     }
   }
 }
@@ -63,7 +64,7 @@ $nav-trigger-icon-color-off : rgba($nav-trigger-icon-color, 0);
   background-color: $nav-trigger-icon-color;
   z-index: 10;
   @include transform(translate(-50%, -50%) rotate(0deg));
-  @include transition(transform 400ms ease);
+  @include transition(transform 400ms $spinCurve);
   &:before, &:after {
     content: " ";
     @include position(absolute, 0 0 null null);

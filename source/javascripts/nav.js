@@ -24,7 +24,7 @@ $(document).ready(function() {
       }, {
         duration: scaleSpeed,
         easing:'easeInExpo',
-        delay: 100,
+        delay: 150,
         complete: function(){
           //show navigation
           navigation.addClass('fade-in');

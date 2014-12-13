@@ -52,23 +52,12 @@ $notice-color: $light-yellow;
 $success-color: $light-green;
 
 // animation
-$scroll-curve: cubic-bezier(0.7,0,0.3,1);
+$scrollCurve    : cubic-bezier(0.7,0,0.3,1);
+$spinCurve      : cubic-bezier(.38,.15,.07,1);
+$easeOutQuit    : cubic-bezier(0.23, 1, 0.32, 1);
+$easeInOutQuint : cubic-bezier(0.86, 0, 0.07, 1);
+$easeInOutCubic : cubic-bezier(0.645, 0.045, 0.355, 1);
+$easeInOutQuart : cubic-bezier(0.77, 0, 0.175, 1);
+$easeOutBack    : cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$easeInBack     : cubic-bezier(0.6, -0.28, 0.735, 0.045);
 
-// header stuff
-$bg-mask-size-top: 10%;
-$bg-mask-size-side: 7%;
-
-$nav-height-desktop: 86%;
-$nav-height-netbook-11: 80%;
-$nav-height-phone-short: 76%;
-$nav-height-phone: 82%;
-
-$mask-height-desktop: 27%;
-$mask-height-netbook-11: 100% - $nav-height-netbook-11 + 10%;
-$mask-height-phone-short: 100% - $nav-height-phone-short + 10%;
-$mask-height-phone: 100% - $nav-height-phone + 10%;
-
-$header-left-width: 53%;
-
-$nav-logo-size-desktop : 64px;
-$nav-logo-size-phone : 54px;
