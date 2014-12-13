@@ -2,7 +2,8 @@ $(document).ready(function() {
   var overlayNav = $('.cd-overlay-nav'),
     overlayContent = $('.cd-overlay-content'),
     toggleNav = $('.cd-nav-trigger'),
-    navigation = $('.cd-primary-nav');
+    navigation = $('.cd-primary-nav'),
+    scaleSpeed = 400;
 
   //inizialize navigation and content layers
   layerInit();
@@ -20,9 +21,14 @@ $(document).ready(function() {
         translateZ: 0,
         scaleX: 1,
         scaleY: 1,
-      }, 500, 'easeInCubic', function(){
-        //show navigation
-        navigation.addClass('fade-in');
+      }, {
+        duration: scaleSpeed,
+        easing:'easeInExpo',
+        delay: 100,
+        complete: function(){
+          //show navigation
+          navigation.addClass('fade-in');
+        }
       });
     } else {
       //animate cross icon into a menu icon
@@ -32,7 +38,7 @@ $(document).ready(function() {
         translateZ: 0,
         scaleX: 1,
         scaleY: 1,
-      }, 500, 'easeInCubic', function(){
+      }, scaleSpeed, 'easeInExpo', function(){
         //hide navigation
         navigation.removeClass('fade-in');
         //scale to zero the navigation layer

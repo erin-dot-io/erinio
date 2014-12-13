@@ -24,35 +24,43 @@ $nav-overlay-pos-desktop  : ($nav-trigger-size-desktop / 2) - ($nav-overlay-init
     @include transition-property(transform);
   }
   &:before {
-    background-color: #091d23;
+    background-color: $blue;
     @include transform(scale(1));
-    @include transition-duration(300ms);
-    @include transition-delay(400ms);
+    @include transition-duration(400ms);
+    @include transition-delay(200ms);
   }
   &:after {
     background-color: $base-body-color;
     @include transform(scale(0));
     @include transition-duration(0ms);
-    @include transition-delay(0ms);
+    @include transition-delay(200ms);
   }
   &.close-nav {
     // user clicks on the .cd-nav-trigger element - 1st rounded background disappears
-    &:before {@include transform(scale(0));}
+    &:before {
+      @include transform(scale(0));
+      @include transition-duration(500ms);
+      @include transition-delay(0ms);
+      @include transition-timing-function(ease-in-out);
+    }
     // user clicks on the .cd-nav-trigger element - 2nd rounded background appears
     &:after {
       @include transform(scale(1));
       @include transition-duration(300ms);
-      @include transition-delay(400ms);
+      @include transition-delay(350ms);
     }
   }
 }
+
+$nav-trigger-icon-color     : shade($blue, 40%);
+$nav-trigger-icon-color-off : rgba($nav-trigger-icon-color, 0);
 
 .cd-icon {
   @include position(absolute, 50% auto auto 50%);
   display: inline-block;
   width: 18px;
   height: 2px;
-  background-color: #fff;
+  background-color: $nav-trigger-icon-color;
   z-index: 10;
   @include transform(translate(-50%, -50%) rotate(0deg));
   @include transition(transform 400ms ease);
@@ -67,13 +75,16 @@ $nav-overlay-pos-desktop  : ($nav-trigger-size-desktop / 2) - ($nav-overlay-init
   &:before {@include transform(translateY(-6px) rotate(0deg));}
   &:after {@include transform(translateY(6px) rotate(0deg));}
   .close-nav & {
-    background-color: rgba(#fff, 0);
+    background-color: $nav-trigger-icon-color-off;
     @include transform(translate(-50%, -50%) rotate(180deg));
-    &:before, &:after {background-color: #fff;}
+    &:before, &:after {background-color: $nav-trigger-icon-color;}
     &:before {@include transform(translateY(0) rotate(45deg));}
     &:after {@include transform(translateY(0) rotate(-45deg));}
   }
 }
+
+$content-fade-timing : 300ms;
+$content-fade-delay  : 50ms;
 
 // containers of the 2 main rounded backgrounds
 // - these containers are used to position the rounded bgs behind the menu icon
@@ -84,7 +95,10 @@ $nav-overlay-pos-desktop  : ($nav-trigger-size-desktop / 2) - ($nav-overlay-init
   @include transform(translate(-($nav-overlay-pos-desktop), $nav-overlay-pos-desktop));
   background-color: black;
   &.is-hidden {
-    @include transition(visibility 0s .3s, opacity .3s 0s);
+    @include transition(
+      visibility 0ms ($content-fade-timing + $content-fade-delay),
+      opacity $content-fade-timing $content-fade-delay
+    );
     visibility: hidden;
     opacity: 0;
   }
