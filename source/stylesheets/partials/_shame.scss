@@ -17,6 +17,19 @@ html.js.turbolinks-progress-bar::before {
   height: 2px;
 }
 
+html {
+  &.modal-open {
+    // overflow-y: scroll;
+    // overflow: hidden;
+    // height: 100%;
+    body {
+      overflow: hidden;
+      // -webkit-overflow-scrolling: touch;
+      height: 100%;
+    }
+  }
+}
+
 body {
   // @include animation(fadeUpIn 1000ms ease);
 }

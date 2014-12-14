@@ -1,7 +1,7 @@
 @import 'init';
 
 $nav-padding-desktop      : 20px;
-$nav-trigger-size-desktop : 44px;
+$nav-trigger-size-desktop : 56px;
 $nav-overlay-init-size    : 4px;
 $nav-overlay-pos-desktop  : ($nav-trigger-size-desktop / 2) - ($nav-overlay-init-size / 2);
 
@@ -16,6 +16,7 @@ $nav-overlay-pos-desktop  : ($nav-trigger-size-desktop / 2) - ($nav-overlay-init
   white-space: nowrap;
   cursor: pointer;
   @include tap-highlight;
+  @include transition-duration(300ms);
   &:before, &:after {
     content: " ";
     @include position(absolute, 0 null null 0);
@@ -38,49 +39,77 @@ $nav-overlay-pos-desktop  : ($nav-trigger-size-desktop / 2) - ($nav-overlay-init
   }
   &.close-nav {
     // user clicks on the .cd-nav-trigger element - 1st rounded background disappears
-    &:before {
-      @include transform(scale(0.9));
-      @include transition-duration(300ms);
-      @include transition-delay(0ms);
-      @include transition-timing-function($easeInOutQuint);
-    }
+    // &:before {
+    //   @include transform(scale(0.89));
+    //   @include transition-duration(100ms);
+    //   @include transition-delay(0ms);
+    //   @include transition-timing-function($easeInOutQuint);
+    // }
     // user clicks on the .cd-nav-trigger element - 2nd rounded background appears
     &:after {
       @include transform(scale(1));
       @include transition-duration(300ms);
-      @include transition-delay(400ms);
+      @include transition-delay(350ms);
     }
+  }
+  &:active {
+    @include transform(scale(0.89));
+    @include transition-duration(70ms);
+    @include transition-delay(0ms);
+    @include transition-timing-function($easeInOutQuint);
   }
 }
 
-$nav-trigger-icon-color     : shade($blue, 40%);
-$nav-trigger-icon-color-off : rgba($nav-trigger-icon-color, 0);
+$nav-trigger-icon-color       : shade($blue, 40%);
+$nav-trigger-icon-color-open  : tint($blue, 80%);
+$nav-trigger-icon-color-close : $nav-trigger-icon-color;
 
-.cd-icon {
+.cd-icon--open, .cd-icon--close {
   @include position(absolute, 50% auto auto 50%);
   display: inline-block;
   width: 18px;
   height: 2px;
-  background-color: $nav-trigger-icon-color;
   z-index: 10;
-  @include transform(translate(-50%, -50%) rotate(0deg));
-  @include transition(transform 400ms $spinCurve);
   &:before, &:after {
     content: " ";
     @include position(absolute, 0 0 null null);
     width: 100%;
     height: 100%;
     background-color: inherit;
-    @include transition(transform 300ms ease);
   }
+}
+
+$nav-trigger-icon-rotate        : 180deg;
+$nav-trigger-icon-rotate-speed  : 500ms;
+$nav-trigger-icon-fade-speed    : 300ms;
+$nav-trigger-icon-fade-delay    : 80ms;
+
+
+.cd-icon--open {
+  background-color: $nav-trigger-icon-color-open;
+  @include transform(translate(-50%, -50%) rotate(0deg));
   &:before {@include transform(translateY(-6px) rotate(0deg));}
   &:after {@include transform(translateY(6px) rotate(0deg));}
+  @include transition(transform $nav-trigger-icon-rotate-speed $spinCurve, opacity $nav-trigger-icon-fade-speed ease $nav-trigger-icon-fade-delay);
   .close-nav & {
-    background-color: $nav-trigger-icon-color-off;
-    @include transform(translate(-50%, -50%) rotate(180deg));
-    &:before, &:after {background-color: $nav-trigger-icon-color;}
-    &:before {@include transform(translateY(0) rotate(45deg));}
-    &:after {@include transform(translateY(0) rotate(-45deg));}
+    opacity: 0;
+    @include transform(translate(-50%, -50%) rotate(-($nav-trigger-icon-rotate)));
+    @include transition(transform $nav-trigger-icon-rotate-speed $spinCurve, opacity $nav-trigger-icon-fade-speed ease 0ms);
+  }
+}
+
+.cd-icon--close {
+  background-color: rgba($blue, 0);
+  @include transform(translate(-50%, -50%) rotate($nav-trigger-icon-rotate));
+  &:before, &:after {background-color: $nav-trigger-icon-color;}
+  &:before {@include transform(translateY(0) rotate(45deg));}
+  &:after {@include transform(translateY(0) rotate(-45deg));}
+  opacity: 0;
+  @include transition(transform $nav-trigger-icon-rotate-speed $spinCurve, opacity $nav-trigger-icon-fade-speed ease 0ms);
+  .close-nav & {
+    opacity: 1;
+    @include transform(translate(-50%, -50%) rotate(0deg));
+    @include transition(transform $nav-trigger-icon-rotate-speed $spinCurve, opacity $nav-trigger-icon-fade-speed ease $nav-trigger-icon-fade-delay);
   }
 }
 
@@ -121,26 +150,52 @@ $content-fade-delay  : 50ms;
   will-change: transform;
   transform: scale(0);
   .cd-overlay-nav & {
-    background-color: $blue;
+    background-color: rgba($blue, 1);
   }
   .cd-overlay-content & {
-    background-color: $base-body-color;
+    background-color: rgba($base-body-color, 1);
   }
 }
 
 .cd-primary-nav {
-  @include position(fixed, 0 0 0 0);
+  @include position(fixed, 5% 5% 5% 5%);
   padding: 5%;
-  background-color: $blue;
+  // background-color: $blue;
   z-index: 3;
   -webkit-overflow-scrolling: touch;
+  text-align: center;
   // animate
-  @include transition(visibility 0ms, opacity 300ms);
+  @include transition(visibility 0ms linear 400ms, opacity 400ms, transform 300ms $easeInExpo);
+  @include transform(translate(20px, -20px) scale(0.95));
   visibility: hidden;
   opacity: 0;
-  a {color: #000;}
+  > ul {
+    > li {
+      > a {
+        display: block;
+        padding: 3%;
+        color: $blue-white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-family: $sans-serif;
+        border-bottom: 1px solid rgba($blue-white, 0.2);
+        &:hover {background-color: rgba($blue-white, 0.1);}
+      }
+      &:last-child {
+        > a {
+          border-bottom-width: 0;
+        }
+      }
+    }
+  }
   &.fade-in {
+    @include transition(visibility 0ms linear 0ms, opacity 300ms, transform 500ms $spinCurve);
+    @include transform(translate(0px, 0px) scale(1));
     visibility: visible;
     opacity: 1;
   }
+  @include media($phone-wide) {
+    @include transform(translate(10px, -10px) scale(0.95));
+  }
 }
+

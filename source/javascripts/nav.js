@@ -1,9 +1,11 @@
 $(document).on("page:update", function() {
-  var overlayNav = $('.cd-overlay-nav'),
+  var overlayNav   = $('.cd-overlay-nav'),
     overlayContent = $('.cd-overlay-content'),
-    toggleNav = $('.cd-nav-trigger'),
-    navigation = $('.cd-primary-nav'),
-    scaleSpeed = 400;
+    toggleNav      = $('.cd-nav-trigger'),
+    navigation     = $('.cd-primary-nav'),
+    docHtml        = $('html'),
+    scaleSpeed     = 400,
+    scaleDelay     = 0;
 
   //inizialize navigation and content layers
   layerInit();
@@ -24,10 +26,11 @@ $(document).on("page:update", function() {
       }, {
         duration: scaleSpeed,
         easing:'easeInExpo',
-        delay: 150,
+        delay: scaleDelay,
         complete: function(){
           //show navigation
           navigation.addClass('fade-in');
+          docHtml.addClass('modal-open');
         }
       });
     } else {
@@ -38,24 +41,31 @@ $(document).on("page:update", function() {
         translateZ: 0,
         scaleX: 1,
         scaleY: 1,
-      }, scaleSpeed, 'easeInExpo', function(){
-        //hide navigation
-        navigation.removeClass('fade-in');
-        //scale to zero the navigation layer
-        overlayNav.children('span').velocity({
-          translateZ: 0,
-          scaleX: 0,
-          scaleY: 0,
-        }, 0);
-        //reduce to opacity of the content layer with the is-hidden class
-        overlayContent.addClass('is-hidden').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
-          //wait for the end of the transition and scale to zero the content layer
-          overlayContent.children('span').velocity({
+      }, {
+        duration: scaleSpeed,
+        easing: 'easeInExpo',
+        begin: function (){
+          //hide navigation
+          navigation.removeClass('fade-in');
+          docHtml.removeClass('modal-open');
+        },
+        complete: function(){
+          //scale to zero the navigation layer
+          overlayNav.children('span').velocity({
             translateZ: 0,
             scaleX: 0,
             scaleY: 0,
-          }, 0, function(){overlayContent.removeClass('is-hidden');});
-        });
+          }, 0);
+          //reduce to opacity of the content layer with the is-hidden class
+          overlayContent.addClass('is-hidden').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+            //wait for the end of the transition and scale to zero the content layer
+            overlayContent.children('span').velocity({
+              translateZ: 0,
+              scaleX: 0,
+              scaleY: 0,
+            }, 0, function(){overlayContent.removeClass('is-hidden');});
+          });
+        }
       });
     }
   });
