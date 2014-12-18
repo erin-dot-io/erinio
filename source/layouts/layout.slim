@@ -7,7 +7,7 @@ html class="no-js" lang="en"
     title
       | #{current_article.title + ' - ' unless current_article.nil?}erin.io
     = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Erin Keeffe"
-    script src="//use.typekit.net/lrp5xzb.js" type="text/javascript"
+    script src="//use.typekit.net/qzv2phz.js" type="text/javascript"
     javascript:
       try{Typekit.load();}catch(e){}
     / javascript:
@@ -31,19 +31,19 @@ html class="no-js" lang="en"
       = yield
     = partial "nav"
 
-    aside
-      .container
-        h2 Recent Articles
-        ol
-          - blog.articles[0...10].each do |article|
-            li
-              = link_to article.title, article
-              span= article.date.strftime('%b %e')
-        h2 Tags
-        ol
-          - blog.tags.each do |tag, articles|
-            li= link_to "#{tag} (#{articles.size})", tag_path(tag)
-        h2 By Year
-        ol
-          - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
-            li= link_to "#{year} (#{articles.size})", blog_year_path(year)
+    / aside
+    /   .container
+    /     h2 Recent Articles
+    /     ol
+    /       - blog.articles[0...10].each do |article|
+    /         li
+    /           = link_to article.title, article
+    /           span= article.date.strftime('%b %e')
+    /     h2 Tags
+    /     ol
+    /       - blog.tags.each do |tag, articles|
+    /         li= link_to "#{tag} (#{articles.size})", tag_path(tag)
+    /     h2 By Year
+    /     ol
+    /       - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
+    /         li= link_to "#{year} (#{articles.size})", blog_year_path(year)

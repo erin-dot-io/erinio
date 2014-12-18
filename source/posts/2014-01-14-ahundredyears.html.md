@@ -1,6 +1,6 @@
 ---
 title: How TED (Really) Works
-byline: How one hairdresser behind the scenes, and Émile Durkheim, says more about TED than all the viral videos
+subtitle: How one hairdresser behind the scenes, and Émile Durkheim, says more about TED than all the viral videos
 date: 2014-01-14
 tags: portfolio
 ---

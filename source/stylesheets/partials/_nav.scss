@@ -1,16 +1,9 @@
 @import 'init';
 
-$nav-padding-desktop      : 30px;
-$nav-trigger-size-desktop : 64px;
-$nav-close-size-desktop   : 52px;
-$nav-close-position       : ($nav-trigger-size-desktop - $nav-close-size-desktop) / 2;
-$nav-overlay-init-size    : 1px;
-$nav-overlay-pos-desktop  : ($nav-trigger-size-desktop / 2) - ($nav-overlay-init-size / 2);
-
 .cd-nav-trigger {
-  @include position(fixed, $nav-padding-desktop $nav-padding-desktop null null);
-  height: $nav-trigger-size-desktop;
-  width: $nav-trigger-size-desktop;
+  @include position(fixed, $nav-padding-desktop null null $nav-padding-desktop);
+  height: $nav-logo-size-desktop;
+  width: $nav-logo-size-desktop;
   z-index: 5;
   // image replacement
   overflow: hidden;
@@ -54,9 +47,12 @@ $nav-overlay-pos-desktop  : ($nav-trigger-size-desktop / 2) - ($nav-overlay-init
       @include transition-duration(300ms);
       @include transition-delay(100ms);
     }
+    &:active {
+      @include transform(scale(0.9) rotate(10deg));
+    }
   }
   &:active {
-    @include transform(scale(0.9));
+    @include transform(scale(0.9) rotate(-10deg));
     @include transition-duration(70ms);
     @include transition-delay(0ms);
     @include transition-timing-function($easeInOutQuint);
@@ -94,7 +90,7 @@ $nav-trigger-icon-fade-delay    : 80ms;
   @include transition(transform $nav-trigger-icon-rotate-speed $spinCurve, opacity $nav-trigger-icon-fade-speed ease $nav-trigger-icon-fade-delay);
   .close-nav & {
     opacity: 0;
-    @include transform(rotate(-($nav-trigger-icon-rotate)));
+    @include transform(rotate($nav-trigger-icon-rotate));
     @include transition(transform $nav-trigger-icon-rotate-speed $spinCurve, opacity $nav-trigger-icon-fade-speed ease 0ms);
   }
   > svg {
@@ -107,7 +103,7 @@ $nav-trigger-icon-fade-delay    : 80ms;
   width: 18px;
   height: 2px;
   background-color: rgba($nav-color-dark, 0);
-  @include transform(translate(-50%, -50%) rotate($nav-trigger-icon-rotate));
+  @include transform(translate(-50%, -50%) rotate(-($nav-trigger-icon-rotate)));
   &:before, &:after {background-color: $nav-trigger-icon-color;}
   &:before {@include transform(translateY(0) rotate(45deg));}
   &:after {@include transform(translateY(0) rotate(-45deg));}
@@ -126,10 +122,10 @@ $content-fade-delay  : 50ms;
 // containers of the 2 main rounded backgrounds
 // - these containers are used to position the rounded bgs behind the menu icon
 .cd-overlay-nav, .cd-overlay-content {
-  @include position(fixed, $nav-padding-desktop $nav-padding-desktop null null);
+  @include position(fixed, $nav-padding-desktop null null $nav-padding-desktop);
   height: $nav-overlay-init-size;
   width: $nav-overlay-init-size;
-  @include transform(translate(-($nav-overlay-pos-desktop), $nav-overlay-pos-desktop));
+  @include transform(translate($nav-overlay-pos-desktop, $nav-overlay-pos-desktop));
   &.is-hidden {
     @include transition(
       visibility 0ms ($content-fade-timing + $content-fade-delay),
@@ -181,7 +177,7 @@ $content-fade-delay  : 50ms;
 .primary-nav__inner {
   // animate
   @include transition(opacity 400ms, transform 300ms $easeInExpo);
-  @include transform(translate(20px, -20px) scale(0.95));
+  @include transform(translate(-20px, -20px) scale(0.95));
   opacity: 0;
   > ul {
     > li {
@@ -208,11 +204,17 @@ $content-fade-delay  : 50ms;
     opacity: 1;
   }
   @include media($phone-wide) {
-    @include transform(translate(10px, -10px) scale(0.95));
+    @include transform(translate(-10px, -10px) scale(0.95));
   }
 }
 
-//// LOGO ////
+// NAV TITLE
+
+.nav-title {
+  @include position(absolute, ($nav-padding-desktop + ($nav-logo-size-desktop / 2) - 13px) null null (($nav-padding-desktop * 1.6667) + $nav-logo-size-desktop));
+}
+
+// SVG LOGO
 .svg-logo {
   .svg-logo-fill {
     fill: $nav-color-dark;

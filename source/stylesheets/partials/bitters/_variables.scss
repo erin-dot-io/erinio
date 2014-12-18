@@ -3,9 +3,12 @@
 $sans-serif: $helvetica;
 $serif: $georgia;
 $mono: 'Courier New', Courier, monospace;
+$condensed: 'nimbus-sans-condensed', 'Impact', $sans-serif;
+$freight-display: 'freight-display-pro', $serif;
 
-$base-font-family: $serif;
-$header-font-family: $helvetica;
+$base-font-family: $sans-serif;
+$header-font-family: $freight-display;
+$title-font-family: $condensed;
 
 // Sizes
 ///////////////////////////////////////////////////////////////////////////////
@@ -64,4 +67,13 @@ $easeInOutCubic : cubic-bezier(0.645, 0.045, 0.355, 1);
 $easeInOutQuart : cubic-bezier(0.77, 0, 0.175, 1);
 $easeOutBack    : cubic-bezier(0.175, 0.885, 0.32, 1.275);
 $easeInBack     : cubic-bezier(0.6, -0.28, 0.735, 0.045);
+
+// nav logo
+
+$nav-padding-desktop      : 30px;
+$nav-logo-size-desktop    : 64px;
+$nav-close-size-desktop   : 52px;
+$nav-close-position       : ($nav-logo-size-desktop - $nav-close-size-desktop) / 2;
+$nav-overlay-init-size    : 1px;
+$nav-overlay-pos-desktop  : ($nav-logo-size-desktop / 2) - ($nav-overlay-init-size / 2);
 

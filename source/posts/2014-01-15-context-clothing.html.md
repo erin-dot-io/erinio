@@ -1,5 +1,6 @@
 ---
-title: Context Clothing
+title: Respect Your Elders
+subtitle: Stop neglecting return users
 date: 2014-01-15
 tags: portfolio
 img: http://cl.ly/image/22333i2v0w21/ctxt-jumbotron-1.jpg

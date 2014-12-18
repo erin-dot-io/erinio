@@ -7,12 +7,20 @@
   &.narrow {
     max-width: 38em;
   }
+  @include media($desktop-narrow) {
+    padding: 0 $nav-padding-desktop 0 (($nav-padding-desktop * 2) + $nav-logo-size-desktop);
+  }
   @include media($tablet) {
     padding: 0 $grid-padding-tablet;
   }
   @include media($phone-wide) {
     padding: 0 $grid-padding-phone * 2;
   }
+}
+
+.row {
+  margin-bottom: 2em;
+  &:last-child {margin-bottom: 0;}
 }
 
 .video {

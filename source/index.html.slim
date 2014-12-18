@@ -10,15 +10,20 @@ per_page: 10
     - if prev_page
       p= link_to 'Previous page', prev_page
 
-- page_articles.each_with_index do |article, i|
+.home-article-items
   .container
-    - if article.data.img?
-      = link_to article do
-        .summary-img style="background-image: url('#{article.data.img}')"
-    h2
-      = link_to article.title, article
-      / span= article.date.strftime('%b %e')
-    = article.summary
+    - page_articles.each_with_index do |article, i|
+      .row
+        / - if article.data.img?
+        /   = link_to article do
+        /     .summary-img style="background-image: url('#{article.data.img}')"
+        = link_to article
+          h2.space
+            = article.title
+          / span= article.date.strftime('%b %e')
+        - if article.data.subtitle?
+          span
+            = article.data.subtitle
 
 - if paginate
   .container
