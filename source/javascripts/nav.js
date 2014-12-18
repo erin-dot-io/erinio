@@ -5,7 +5,7 @@ $(document).on("page:update", function() {
     navigation     = $('.cd-primary-nav'),
     docHtml        = $('html'),
     scaleSpeed     = 400,
-    scaleDelay     = 0;
+    scaleDelay     = 100;
 
   //inizialize navigation and content layers
   layerInit();

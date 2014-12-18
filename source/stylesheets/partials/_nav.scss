@@ -1,8 +1,10 @@
 @import 'init';
 
-$nav-padding-desktop      : 20px;
-$nav-trigger-size-desktop : 56px;
-$nav-overlay-init-size    : 4px;
+$nav-padding-desktop      : 30px;
+$nav-trigger-size-desktop : 64px;
+$nav-close-size-desktop   : 52px;
+$nav-close-position       : ($nav-trigger-size-desktop - $nav-close-size-desktop) / 2;
+$nav-overlay-init-size    : 1px;
 $nav-overlay-pos-desktop  : ($nav-trigger-size-desktop / 2) - ($nav-overlay-init-size / 2);
 
 .cd-nav-trigger {
@@ -18,20 +20,21 @@ $nav-overlay-pos-desktop  : ($nav-trigger-size-desktop / 2) - ($nav-overlay-init
   @include tap-highlight;
   @include transition-duration(300ms);
   &:before, &:after {
-    content: " ";
-    @include position(absolute, 0 null null 0);
-    border-radius: 50%;
-    height: 100%;
-    width: 100%;
-    @include transition-property(transform);
+
   }
-  &:before {
-    background-color: $blue;
-    @include transform(scale(1));
-    @include transition-duration(400ms);
-    @include transition-delay(200ms);
-  }
+  // &:before {
+  //   background-color: $nav-color-dark;
+  //   @include transform(scale(1));
+  //   @include transition-duration(400ms);
+  //   @include transition-delay(200ms);
+  // }
   &:after {
+    content: " ";
+    @include position(absolute, $nav-close-position null null $nav-close-position);
+    border-radius: 50%;
+    height: $nav-close-size-desktop;
+    width: $nav-close-size-desktop;
+    @include transition-property(transform);
     background-color: $base-body-color;
     @include transform(scale(0));
     @include transition-duration(0ms);
@@ -40,7 +43,7 @@ $nav-overlay-pos-desktop  : ($nav-trigger-size-desktop / 2) - ($nav-overlay-init
   &.close-nav {
     // user clicks on the .cd-nav-trigger element - 1st rounded background disappears
     // &:before {
-    //   @include transform(scale(0.89));
+    //   @include transform(scale(0.9));
     //   @include transition-duration(100ms);
     //   @include transition-delay(0ms);
     //   @include transition-timing-function($easeInOutQuint);
@@ -49,26 +52,23 @@ $nav-overlay-pos-desktop  : ($nav-trigger-size-desktop / 2) - ($nav-overlay-init
     &:after {
       @include transform(scale(1));
       @include transition-duration(300ms);
-      @include transition-delay(350ms);
+      @include transition-delay(100ms);
     }
   }
   &:active {
-    @include transform(scale(0.89));
+    @include transform(scale(0.9));
     @include transition-duration(70ms);
     @include transition-delay(0ms);
     @include transition-timing-function($easeInOutQuint);
   }
 }
 
-$nav-trigger-icon-color       : shade($blue, 40%);
-$nav-trigger-icon-color-open  : tint($blue, 80%);
+$nav-trigger-icon-color       : shade($nav-color-dark, 40%);
+$nav-trigger-icon-color-open  : tint($nav-color-dark, 80%);
 $nav-trigger-icon-color-close : $nav-trigger-icon-color;
 
 .cd-icon--open, .cd-icon--close {
-  @include position(absolute, 50% auto auto 50%);
   display: inline-block;
-  width: 18px;
-  height: 2px;
   z-index: 10;
   &:before, &:after {
     content: " ";
@@ -86,20 +86,27 @@ $nav-trigger-icon-fade-delay    : 80ms;
 
 
 .cd-icon--open {
-  background-color: $nav-trigger-icon-color-open;
-  @include transform(translate(-50%, -50%) rotate(0deg));
+  @include position( absolute, 0px 0 0 0px );
+  // background-color: $nav-trigger-icon-color-open;
+  @include transform(rotate(0deg));
   &:before {@include transform(translateY(-6px) rotate(0deg));}
   &:after {@include transform(translateY(6px) rotate(0deg));}
   @include transition(transform $nav-trigger-icon-rotate-speed $spinCurve, opacity $nav-trigger-icon-fade-speed ease $nav-trigger-icon-fade-delay);
   .close-nav & {
     opacity: 0;
-    @include transform(translate(-50%, -50%) rotate(-($nav-trigger-icon-rotate)));
+    @include transform(rotate(-($nav-trigger-icon-rotate)));
     @include transition(transform $nav-trigger-icon-rotate-speed $spinCurve, opacity $nav-trigger-icon-fade-speed ease 0ms);
+  }
+  > svg {
+    @include position( absolute, 0px 0 0 0px );
   }
 }
 
 .cd-icon--close {
-  background-color: rgba($blue, 0);
+  @include position(absolute, 50% auto auto 50%);
+  width: 18px;
+  height: 2px;
+  background-color: rgba($nav-color-dark, 0);
   @include transform(translate(-50%, -50%) rotate($nav-trigger-icon-rotate));
   &:before, &:after {background-color: $nav-trigger-icon-color;}
   &:before {@include transform(translateY(0) rotate(45deg));}
@@ -123,7 +130,6 @@ $content-fade-delay  : 50ms;
   height: $nav-overlay-init-size;
   width: $nav-overlay-init-size;
   @include transform(translate(-($nav-overlay-pos-desktop), $nav-overlay-pos-desktop));
-  background-color: black;
   &.is-hidden {
     @include transition(
       visibility 0ms ($content-fade-timing + $content-fade-delay),
@@ -148,9 +154,9 @@ $content-fade-delay  : 50ms;
   position: absolute;
   border-radius: 50%;
   will-change: transform;
-  transform: scale(0);
+  @include transform(scale(0));
   .cd-overlay-nav & {
-    background-color: rgba($blue, 1);
+    background-color: rgba($nav-color-dark, 1);
   }
   .cd-overlay-content & {
     background-color: rgba($base-body-color, 1);
@@ -158,28 +164,36 @@ $content-fade-delay  : 50ms;
 }
 
 .cd-primary-nav {
-  @include position(fixed, 5% 5% 5% 5%);
-  padding: 5%;
-  // background-color: $blue;
+  @include position(fixed, 0 0 0 0);
+  padding: 10%;
+  background-color: $nav-color-dark;
   z-index: 3;
   -webkit-overflow-scrolling: touch;
   text-align: center;
-  // animate
-  @include transition(visibility 0ms linear 400ms, opacity 400ms, transform 300ms $easeInExpo);
-  @include transform(translate(20px, -20px) scale(0.95));
   visibility: hidden;
+  @include transition(visibility 0ms linear 400ms);
+  &.fade-in {
+    @include transition(visibility 0ms linear 0ms);
+    visibility: visible;
+  }
+}
+
+.primary-nav__inner {
+  // animate
+  @include transition(opacity 400ms, transform 300ms $easeInExpo);
+  @include transform(translate(20px, -20px) scale(0.95));
   opacity: 0;
   > ul {
     > li {
       > a {
         display: block;
         padding: 3%;
-        color: $blue-white;
+        color: $base-body-color;
         text-transform: uppercase;
         letter-spacing: 1px;
         font-family: $sans-serif;
-        border-bottom: 1px solid rgba($blue-white, 0.2);
-        &:hover {background-color: rgba($blue-white, 0.1);}
+        border-bottom: 1px solid rgba($base-body-color, 0.2);
+        &:hover {background-color: rgba($base-body-color, 0.1);}
       }
       &:last-child {
         > a {
@@ -188,14 +202,21 @@ $content-fade-delay  : 50ms;
       }
     }
   }
-  &.fade-in {
-    @include transition(visibility 0ms linear 0ms, opacity 300ms, transform 500ms $spinCurve);
+  .fade-in & {
+    @include transition(opacity 300ms, transform 500ms $spinCurve);
     @include transform(translate(0px, 0px) scale(1));
-    visibility: visible;
     opacity: 1;
   }
   @include media($phone-wide) {
     @include transform(translate(10px, -10px) scale(0.95));
   }
 }
+
+//// LOGO ////
+.svg-logo {
+  .svg-logo-fill {
+    fill: $nav-color-dark;
+  }
+}
+
 
