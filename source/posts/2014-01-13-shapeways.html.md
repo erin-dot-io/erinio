@@ -3,7 +3,10 @@ title: Shapeways
 subtitle: Designing for the unknown.
 date: 2014-01-13
 tags: projects
-style: devices
+style: text-only
+align: center
+overlay: dark
+color: '#fff'
 img: https://d262ilb51hltx0.cloudfront.net/max/1000/1*dabcysvIdRA5r3yiR1OA3A.jpeg
 ---
 
