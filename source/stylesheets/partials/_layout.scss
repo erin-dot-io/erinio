@@ -5,10 +5,14 @@
   @include box-sizing(content-box);
   padding: 0 $grid-padding-desktop;
   &.narrow {
-    max-width: 38em;
+    max-width: em(740);
+  }
+  &.top-narrow {
+    max-width: em(800);
   }
   @include media($desktop-narrow) {
     padding: 0 $nav-padding-desktop 0 (($nav-padding-desktop * 2) + $nav-logo-size-desktop);
+    .article__cover & {padding: 0 $grid-padding-desktop;}
   }
   @include media($tablet) {
     padding: 0 $grid-padding-tablet;
@@ -16,6 +20,7 @@
   @include media($phone-wide) {
     padding: 0 $grid-padding-phone * 2;
   }
+
 }
 
 .row {

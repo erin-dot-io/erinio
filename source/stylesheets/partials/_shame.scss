@@ -1,20 +1,11 @@
 @import 'init';
 
-.summary-img {
-  position: relative;
-  padding-bottom: 41.7%;
-  @include background-cover;
-  @include media($phone) {
-    padding-bottom: 0;
-    height: 200px;
-  }
-}
-
 // turbolinks progress bar
 
 html.js.turbolinks-progress-bar::before {
   // @include transition(opacity 200ms cubic-bezier(0.23, 1, 0.32, 1));
   height: 2px;
+  background-color: $nav-color-dark;
 }
 
 html {
@@ -30,12 +21,7 @@ html {
   }
 }
 
-body {
+html, body, main, article {
+  height: 100%;
   // @include animation(fadeUpIn 1000ms ease);
-}
-
-// ARTICLE LIST
-
-.home-article-items {
-  margin-top: 25vh;
 }

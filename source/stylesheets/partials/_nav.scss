@@ -211,13 +211,23 @@ $content-fade-delay  : 50ms;
 // NAV TITLE
 
 .nav-title {
+  color: $nav-color-dark;
   @include position(absolute, ($nav-padding-desktop + ($nav-logo-size-desktop / 2) - 13px) null null (($nav-padding-desktop * 1.6667) + $nav-logo-size-desktop));
+  &:hover {
+    color: $nav-link-color-dark;
+  }
+  .overlay-light & {
+    color: $base-body-color;
+  }
 }
 
 // SVG LOGO
 .svg-logo {
   .svg-logo-fill {
     fill: $nav-color-dark;
+    .overlay-light & {
+      fill: $base-body-color;
+    }
   }
 }
 

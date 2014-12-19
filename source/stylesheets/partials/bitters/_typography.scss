@@ -12,16 +12,10 @@ body {
 h1, .h1, h2, h3, h4, h5, h6 {
   font-family: $header-font-family;
   line-height: 1;
-  letter-spacing: -0.005em;
+  // letter-spacing: -0.005em;
   margin: 0;
   text-rendering: optimizeLegibility; // Fix the character spacing for headings
   &.space {margin-bottom: .2em;}
-  .home-article-items & {
-    color: $base-font-color;
-    border-bottom: 2px solid;
-    line-height: 0.9;
-    text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #FFF;
-  }
 }
 
 h1, .h1 {

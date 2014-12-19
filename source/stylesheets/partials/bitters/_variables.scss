@@ -48,6 +48,7 @@ $hover-link-color: darken($base-accent-color, 15);
 
 // Logo colors
 $nav-color-dark : $warm-gray;
+$nav-link-color-dark : tint($warm-gray, 10%);
 
 // Border color
 $base-border-color: $light-gray;
@@ -60,7 +61,7 @@ $success-color: $light-green;
 // animation
 $scrollCurve    : cubic-bezier(0.7,0,0.3,1);
 $spinCurve      : cubic-bezier(.38,.15,.07,1);
-$easeOutQuit    : cubic-bezier(0.23, 1, 0.32, 1);
+$easeOutQuint    : cubic-bezier(0.23, 1, 0.32, 1);
 $easeInExpo     : cubic-bezier(0.55, 0.055, 0.675, 0.19);
 $easeInOutQuint : cubic-bezier(0.86, 0, 0.07, 1);
 $easeInOutCubic : cubic-bezier(0.645, 0.045, 0.355, 1);

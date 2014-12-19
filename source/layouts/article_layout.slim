@@ -1,9 +1,17 @@
 = wrap_layout :layout do
-  article
-    - if current_article.data.img?
-      .summary-img style="background-image: url('#{current_article.data.img}')"
-    .container
-      h1
-        = current_article.data.title
-      a href="/" ← Home
-      = yield
+  = content_tag :article, :class => "#{' align-' + current_article.data.align unless current_article.data.align.nil?}"
+    - if current_article.data.style == 'cover-image'
+      - if current_article.data.img?
+        .article__cover style="background-color: #{current_article.data.color}"
+          / TODO: Fade to color & shift photo on scroll
+          .article__cover-img style="background-image: url('#{current_article.data.img}');"
+          .article__top
+            .container.top-narrow
+              h1
+                = current_article.data.title
+    .article-body
+      .container.narrow
+        - if current_article.data.style != 'cover-image'
+          h1
+            = current_article.data.title
+        = yield

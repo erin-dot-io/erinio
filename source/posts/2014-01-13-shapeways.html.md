@@ -1,7 +1,9 @@
 ---
-title: How to Email with an Old Friend After Falling Out of Touch
+title: Shapeways
+subtitle: Designing for the unknown.
 date: 2014-01-13
-tags: portfolio
+tags: projects
+style: devices
 img: https://d262ilb51hltx0.cloudfront.net/max/1000/1*dabcysvIdRA5r3yiR1OA3A.jpeg
 ---
 

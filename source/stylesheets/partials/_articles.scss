@@ -1,0 +1,110 @@
+@import 'init';
+
+// ARTICLE LIST
+
+.home-article-items {
+  margin-top: 25vh;
+}
+
+.article-item {
+	position: relative;
+  margin-bottom: 3em;
+  &.cover-image {
+		padding-top: 1.3em;
+	  margin: 3em 0;
+  }
+  &.text-only {
+  	margin: 3em 0;
+  }
+  &:last-child {margin-bottom: 0;}
+}
+
+.article-item__title {
+  color: $base-font-color;
+  line-height: 0.9;
+  .text-only & {
+	  border-bottom: 2px solid;
+	  text-shadow:
+    -1px -1px 0 $base-body-color,
+    1px -1px 0 $base-body-color,
+    -1px 1px 0 $base-body-color,
+    1px 1px 0 $base-body-color,
+    -1px -1px 0 $base-body-color,
+    1px -1px 0 $base-body-color,
+    -1px 1px 0 $base-body-color,
+    1px 1px 0 $base-body-color;
+  }
+  .cover-image & {
+  	@include position(absolute, 0 null null 0);
+  	@include transition(color 300ms ease, transform 300ms ease);
+  }
+}
+
+.article-item__img {
+  position: relative;
+  @include background-cover;
+  &:not(.hover) {
+  	padding-bottom: 29.7%;
+		margin: 0 -10px;
+		background-blend-mode: lighten;
+  }
+  &.hover {
+  	@include position(absolute, 0 0 0 0);
+  	@include transition(opacity 300ms);
+  	opacity: 0;
+  }
+  @include media($phone) {
+    padding-bottom: 0;
+    height: 200px;
+  }
+  .align-bottom & {
+  	@include background-cover(bottom, center);
+  }
+}
+
+.article-item {
+	&.cover-image {
+		.no-touch & > a:hover {
+			.article-item__img {
+				&.hover {
+					opacity: 0.65;
+				}
+			}
+			.article-item__title {
+				color: $base-body-color;
+				@include transform(translateY(30px));
+			}
+		}
+	}
+}
+
+// ARTICLE COVER IMAGE
+
+.article__cover {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin-bottom: 4em;
+	.article__top {
+		@include position(absolute, 35% 0 null 0);
+		text-align: center;
+	}
+	.overlay-light & {color: $base-body-color;}
+}
+
+.article__cover-img {
+	@include position(absolute, 0 0 0 0);
+	@include background-cover;
+	opacity: 0.8;
+  .align-bottom & {
+  	@include background-cover(bottom, center);
+  }
+}
+
+// ARTICLE BODY
+
+.article-body {
+
+}
+
+
