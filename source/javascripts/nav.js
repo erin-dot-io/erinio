@@ -1,4 +1,12 @@
 $(document).on("page:update", function() {
+  navOpen();
+});
+
+$(document).on("page:restore", function() {
+  navOpen();
+});
+
+function navOpen() {
   var overlayNav   = $('.cd-overlay-nav'),
     overlayContent = $('.cd-overlay-content'),
     toggleNav      = $('.cd-nav-trigger'),
@@ -22,7 +30,7 @@ $(document).on("page:update", function() {
       overlayNav.children('span').velocity({
         translateZ: 0,
         scaleX: 1,
-        scaleY: 1,
+        scaleY: 1
       }, {
         duration: scaleSpeed,
         easing:'easeInExpo',
@@ -40,7 +48,7 @@ $(document).on("page:update", function() {
       overlayContent.children('span').velocity({
         translateZ: 0,
         scaleX: 1,
-        scaleY: 1,
+        scaleY: 1
       }, {
         duration: scaleSpeed,
         easing: 'easeInExpo',
@@ -54,7 +62,7 @@ $(document).on("page:update", function() {
           overlayNav.children('span').velocity({
             translateZ: 0,
             scaleX: 0,
-            scaleY: 0,
+            scaleY: 0
           }, 0);
           //reduce to opacity of the content layer with the is-hidden class
           overlayContent.addClass('is-hidden').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
@@ -62,7 +70,7 @@ $(document).on("page:update", function() {
             overlayContent.children('span').velocity({
               translateZ: 0,
               scaleX: 0,
-              scaleY: 0,
+              scaleY: 0
             }, 0, function(){overlayContent.removeClass('is-hidden');});
           });
         }
@@ -75,24 +83,24 @@ $(document).on("page:update", function() {
     overlayNav.children('span').velocity({
       scaleX: 0,
       scaleY: 0,
-      translateZ: 0,
+      translateZ: 0
     }, 50).velocity({
       height : diameterValue+'px',
       width : diameterValue+'px',
       top : -(diameterValue/2)+'px',
-      left : -(diameterValue/2)+'px',
+      left : -(diameterValue/2)+'px'
     }, 0);
 
     overlayContent.children('span').velocity({
       scaleX: 0,
       scaleY: 0,
-      translateZ: 0,
+      translateZ: 0
     }, 50).velocity({
       height : diameterValue+'px',
       width : diameterValue+'px',
       top : -(diameterValue/2)+'px',
-      left : -(diameterValue/2)+'px',
+      left : -(diameterValue/2)+'px'
     }, 0);
   }
 
-});
+}
