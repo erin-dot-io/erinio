@@ -1,8 +1,4 @@
-$(document).on("page:update", function() {
-  navOpen();
-});
-
-$(document).on("page:restore", function() {
+$(document).on("ready page:load", function() {
   navOpen();
 });
 
