@@ -211,8 +211,14 @@ $content-fade-delay  : 50ms;
 // NAV TITLE
 
 .nav-title {
+  font-family: $title-font-family;
+  font-size: $base-font-size * 1.875; // 30px
+  line-height: 1;
   color: $nav-color-dark;
-  @include position(absolute, ($nav-padding-desktop + ($nav-logo-size-desktop / 2) - 13px) null null (($nav-padding-desktop * 1.6667) + $nav-logo-size-desktop));
+  @include position(absolute, ($nav-padding-desktop + ($nav-logo-size-desktop / 2) - 15px) null null 50%);
+  width: 200px;
+  margin-left: -100px;
+  text-align: center;
   &:hover {
     color: $nav-link-color-dark;
   }

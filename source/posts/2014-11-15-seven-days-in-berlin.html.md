@@ -1,6 +1,6 @@
 ---
 title: Seven Days in&nbsp;Berlin
-subtitle: Is not nearly long enough.
+subtitle: Is not nearly long enough
 date: 2014-11-15
 tags: travel
 style: cover-image

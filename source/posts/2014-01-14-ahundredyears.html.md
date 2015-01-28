@@ -1,6 +1,6 @@
 ---
-title: A Hundred Years
-subtitle: Design with purpouse.
+title: Names for Things I'll Never Have Time to Use
+subtitle: Please somebody use these
 date: 2014-01-14
 tags: projects
 style: text-only

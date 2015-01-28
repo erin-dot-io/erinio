@@ -1,6 +1,6 @@
 ---
 title: Thirty-six Months in LA
-subtitle: The best part of LA is leaving LA.
+subtitle: The best part of LA is leaving LA
 date: 2014-11-14
 tags: travel
 style: cover-image

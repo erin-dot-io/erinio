@@ -3,7 +3,7 @@ doctype html
   head
     meta charset="utf-8"
     meta content="IE=edge;chrome=1" http-equiv="X-UA-Compatible"
-    meta name="viewport" content="width=device-width, user-scalable=no"
+    meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1"
     title
       | #{current_article.title + ' / ' unless current_article.nil?}ERIN DOT IO / Erin D Keeffe
     = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Erin Keeffe"
@@ -27,9 +27,9 @@ doctype html
     = javascript_include_tag  "all"
 
   = content_tag :body, :class => "#{' overlay-' + current_article.data.overlay unless current_article.nil?}#{' align-' + current_article.data.align unless current_article.nil?}"
+    = partial "nav"
     main.content.cd-content role="main"
       = yield
-    = partial "nav"
 
     / aside
     /   .container

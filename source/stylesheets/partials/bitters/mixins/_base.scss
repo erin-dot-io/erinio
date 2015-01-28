@@ -9,3 +9,19 @@
   background-position: $pos-y $pos-x;
   background-size: cover;
 }
+
+@mixin fill($width: 100%) {
+  @include box-sizing(border-box);
+  width: $width;
+}
+
+@mixin font-smoothing($value: on) {
+    @if $value == on {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    @else if $value == off {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
+}

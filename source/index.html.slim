@@ -3,30 +3,49 @@ pageable: true
 per_page: 10
 ---
 
-- if paginate && num_pages > 1
-  .container
-    p
-      | Page #{page_number} of #{num_pages}
-    - if prev_page
-      p= link_to 'Previous page', prev_page
+.homepage-content
 
-.home-article-items
-  .container.narrow
-    - page_articles.each_with_index do |article, i|
-      = content_tag :div, :class => "article-item#{' ' + article.data.style unless article.data.style.nil?}#{' align-' + article.data.align unless article.data.align.nil?}"
-        = link_to article
-          - if article.data.img? && article.data.style == 'cover-image'
-            .article-item__img style="background-image: url('#{article.data.thumb}'); background-color: #{article.data.color}"
-              .article-item__img.hover style="background-image: url('#{article.data.thumb}');"
-          h2.article-item__title
-            = article.title
-          / TODO: put date in border box all caps style
-          / span= article.date.strftime('%b %e')
-        / - if article.data.subtitle?
-        /   span
-        /     = article.data.subtitle
+  - if paginate && num_pages > 1
+    .container
+      p
+        | Page #{page_number} of #{num_pages}
+      - if prev_page
+        p= link_to 'Previous page', prev_page
 
-- if paginate
-  .container
-    - if next_page
-      p= link_to 'Next page', next_page
+  .home-logo
+    = partial "images/logo/logo-outline-lg.svg"
+
+  .home-article-items
+    .container.narrow
+      - page_articles.each_with_index do |article, i|
+        = content_tag :div, :class => "article-item#{' ' + article.data.style unless article.data.style.nil?}#{' align-' + article.data.align unless article.data.align.nil?}"
+          = link_to article
+            - if article.data.img? && article.data.style == 'cover-image'
+              .article-item__img style="background-image: url('#{article.data.thumb}'); background-color: #{article.data.color}"
+                .article-item__hover-wrap
+                  .article-item__img.hover style="background-image: url('#{article.data.thumb}');"
+                  .article-item__info
+                    / = article.date.strftime('%b.%e.%Y')
+                    - if article.data.subtitle?
+                      span
+                        = article.data.subtitle
+                        '
+                        | ➞
+              h2.article-item__title
+                = article.title
+            - else
+              h2.article-item__title
+                = article.title
+              .article-item__info
+                - if article.data.subtitle?
+                  span
+                    = article.data.subtitle
+                    '
+                    | ➞
+
+
+  - if paginate
+    .container
+      - if next_page
+        p= link_to 'Next page', next_page
+

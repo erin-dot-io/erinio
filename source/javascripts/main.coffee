@@ -1,4 +1,4 @@
 Turbolinks.enableProgressBar()
 
-$(document).on "page:update", ->
+$(document).on "ready page:load", ->
   FastClick.attach(document.body)

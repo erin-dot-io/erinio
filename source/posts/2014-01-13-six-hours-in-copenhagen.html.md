@@ -1,6 +1,6 @@
 ---
 title: Six Hours in Copenhagen
-subtitle: Making the most of a quick "Hello".
+subtitle: Making the most of a quick "Hello"
 date: 2014-01-13
 tags: travel
 style: cover-image

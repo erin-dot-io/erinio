@@ -1,6 +1,6 @@
 ---
 title: Shapeways
-subtitle: Designing for the unknown.
+subtitle: Designing for the unknown
 date: 2014-01-13
 tags: projects
 style: text-only
