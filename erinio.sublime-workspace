@@ -1,0 +1,2084 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"position",
+				"position"
+			],
+			[
+				"tal",
+				"ta-l	text-align: left;"
+			],
+			[
+				"p",
+				"parentSelector"
+			],
+			[
+				"bind",
+				"bindElements"
+			],
+			[
+				"grid-padding",
+				"grid-padding-phone"
+			],
+			[
+				"problem-in",
+				"problem-info-top-mobile"
+			],
+			[
+				"base",
+				"base-font-size"
+			],
+			[
+				"grid-p",
+				"grid-padding-desktop"
+			],
+			[
+				"browser",
+				"browser-ui-height"
+			],
+			[
+				"grid",
+				"grid-padding-desktop"
+			],
+			[
+				"t",
+				"t	top"
+			],
+			[
+				"tablet",
+				"tablet-ui-color"
+			],
+			[
+				"avata",
+				"avatar-home-size-phone-wide"
+			],
+			[
+				"boco",
+				"border-color"
+			],
+			[
+				"avatar",
+				"avatar-home-size"
+			],
+			[
+				"fsi",
+				"fs-i	font-style: italic;"
+			],
+			[
+				"avat",
+				"avatar-home-size"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"z",
+				"z	z-index"
+			],
+			[
+				"no",
+				"nowrap"
+			],
+			[
+				"base-font",
+				"base-font-color"
+			],
+			[
+				"di",
+				"d-i	display: inline;"
+			],
+			[
+				"c",
+				"color"
+			],
+			[
+				"bo",
+				"border"
+			],
+			[
+				"w",
+				"w	width"
+			],
+			[
+				"wsp",
+				"whs-pw	white-space: pre-wrap;"
+			],
+			[
+				"br",
+				"border-right"
+			],
+			[
+				"b",
+				"b	bottom"
+			],
+			[
+				"table-c",
+				"table-cell"
+			],
+			[
+				"leftDr",
+				"leftDrawerTrigger"
+			],
+			[
+				"tt",
+				"tt-n	text-transform: none;"
+			],
+			[
+				"bw",
+				"border-width"
+			],
+			[
+				"bra",
+				"border-radius"
+			],
+			[
+				"span",
+				"span	span-columns"
+			],
+			[
+				"anim",
+				"anim-	animation: ${1:name} ${2:duration} ${3:timing-function} ${4:delay} ${5:iteration-count} ${6:direction} ${7:fill-mode};"
+			],
+			[
+				"spin",
+				"spin_big"
+			],
+			[
+				"m",
+				"m	margin"
+			],
+			[
+				"dec",
+				"decimal-leading-zero"
+			],
+			[
+				"mw",
+				"miw	min-width"
+			],
+			[
+				"l",
+				"l	left"
+			],
+			[
+				"backg",
+				"background-color"
+			],
+			[
+				"fs",
+				"font-size"
+			],
+			[
+				"ls",
+				"letter-spacing"
+			],
+			[
+				"ff",
+				"ff-s	font-family: serif;"
+			],
+			[
+				"vat",
+				"va-tb	vertical-align: text-bottom;"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "source/stylesheets/partials/bitters/_grid-settings.scss",
+			"settings":
+			{
+				"buffer_size": 1185,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "source/stylesheets/partials/bitters/_bitters.scss",
+			"settings":
+			{
+				"buffer_size": 507,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "source/javascripts/nav.js",
+			"settings":
+			{
+				"buffer_size": 3034,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "source/layouts/layout.slim",
+			"settings":
+			{
+				"buffer_size": 2001,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "source/stylesheets/partials/_shame.scss",
+			"settings":
+			{
+				"buffer_size": 521,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "source/stylesheets/partials/_init.scss",
+			"settings":
+			{
+				"buffer_size": 491,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "source/stylesheets/partials/bitters/mixins/_base.scss",
+			"settings":
+			{
+				"buffer_size": 615,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"selected_items":
+		[
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"define",
+				"Package Syncing: Define Sync Folder"
+			],
+			[
+				"defin",
+				"Package Syncing: Define Sync Folder"
+			],
+			[
+				"push",
+				"Package Syncing: Push Settings"
+			],
+			[
+				"packag",
+				"Package Syncing: Enable Syncing"
+			],
+			[
+				"package sync",
+				"Package Syncing: Disable Syncing"
+			],
+			[
+				"package sy",
+				"Package Syncing: Push Settings"
+			],
+			[
+				"disco",
+				"Package Control: Discover Packages"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"isnt",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"discov",
+				"Package Control: Discover Packages"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"ruby",
+				"Set Syntax: Ruby"
+			],
+			[
+				"enc",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"disab",
+				"Package Control: Disable Package"
+			],
+			[
+				"disc",
+				"Package Control: Discover Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"browse",
+				"Preferences: Browse Packages"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"slim",
+				"Set Syntax: Ruby Slim"
+			],
+			[
+				"html rai",
+				"Set Syntax: HTML (Rails)"
+			],
+			[
+				"erb",
+				"Emmet: Decrement Number by 1"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"scss",
+				"Set Syntax: SCSS"
+			],
+			[
+				"rails",
+				"Set Syntax: HTML (Rails)"
+			],
+			[
+				"esc",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"mini",
+				"Clientside Minify Javascript/CSS"
+			],
+			[
+				"coff",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"rub",
+				"Set Syntax: Ruby"
+			],
+			[
+				"RUBY",
+				"Set Syntax: Ruby"
+			],
+			[
+				"discover",
+				"Package Control: Discover Packages"
+			],
+			[
+				"coffe",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"de",
+				"Emmet: Decrement Number by 1"
+			],
+			[
+				"forma",
+				"Format Code"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"tidy",
+				"Tidy HTML"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"color",
+				"Live CSS: Colorize"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"unc",
+				"Live CSS: Uncolorize"
+			],
+			[
+				"live",
+				"Live CSS: Colorize"
+			],
+			[
+				"local",
+				"Live CSS: Toggle locally"
+			],
+			[
+				"enab",
+				"Package Control: Enable Package"
+			],
+			[
+				"liv",
+				"Live CSS: Colorize"
+			],
+			[
+				"colo",
+				"Live CSS: Colorize"
+			],
+			[
+				"globa",
+				"Live CSS: Toggle globally"
+			]
+		],
+		"width": 529.0
+	},
+	"console":
+	{
+		"height": 125.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Volumes/Content/Sites/edk/erinio",
+		"/Volumes/Content/Sites/edk/erinio/source",
+		"/Volumes/Content/Sites/edk/erinio/source/javascripts",
+		"/Volumes/Content/Sites/edk/erinio/source/layouts"
+	],
+	"file_history":
+	[
+		"/Volumes/Content/Sites/edk/erinio/source/javascripts/main.coffee",
+		"/Volumes/Content/Sites/edk/erinio/config.rb",
+		"/Volumes/Content/Sites/edk/erinio/source/stylesheets/partials/_layout.scss",
+		"/Volumes/Content/Sites/edk/erinio/source/layouts/layout.slim",
+		"/Volumes/Content/Sites/edk/erinio/Gemfile",
+		"/Volumes/Content/Sites/edk/erinio/source/index.html.slim",
+		"/Volumes/Content/Sites/edk/erinio/source/stylesheets/partials/_icons-icomoon.scss",
+		"/Volumes/Content/Sites/edk/erinio/source/stylesheets/all.css.scss",
+		"/Volumes/Content/Sites/edk/erinio/source/stylesheets/partials/bitters/mixins/_base.scss",
+		"/Volumes/Content/Sites/edk/erinio/erinio.sublime-project",
+		"/Volumes/Content/Sites/edk/erinio/helpers/markdown_helper.rb",
+		"/Volumes/Content/Sites/edk/erinio/source/layouts/article_layout.slim",
+		"/Volumes/Content/Sites/edk/erinio/source/stylesheets/partials/bitters/_variables.scss",
+		"/Volumes/Content/Sites/edk/erinio/config.ru",
+		"/Volumes/Content/Sites/edk/erinio/source/stylesheets/partials/bitters/_grid-settings.scss",
+		"/Volumes/Content/Sites/edk/erinio/source/javascripts/all.js",
+		"/Volumes/Content/Sites/edk/erinio/.buildpacks",
+		"/Volumes/Content/Sites/edk/erinio/source/stylesheets/partials/_articles.scss",
+		"/Volumes/Content/Sites/edk/erinio/source/stylesheets/partials/_shame.scss",
+		"/Volumes/Content/Sites/edk/erinio.sublime-project",
+		"/Users/ekeeffe/Library/Application Support/Sublime Text 3/Packages/BracketHighlighter/bh_core.sublime-settings",
+		"/Users/ekeeffe/Library/Application Support/Sublime Text 3/Packages/User/bh_core.sublime-settings",
+		"/Volumes/Content/Sites/edk/erinio/source/images/logo/logo-sm.svg",
+		"/Volumes/Content/Sites/edk/erinio/tmp/javascripts/nav.js",
+		"/Volumes/Content/Sites/edk/erinio/source/_nav.html.slim",
+		"/Volumes/Content/Sites/edk/erinio/source/stylesheets/partials/_nav.scss",
+		"/Volumes/Content/Sites/edk/erinio/source/stylesheets/partials/_init.scss",
+		"/Volumes/Content/Sites/edk/erinio/source/stylesheets/partials/_helpers.scss",
+		"/Volumes/Content/Sites/edk/erinio/source/stylesheets/partials/_animations.scss",
+		"/Volumes/Content/Sites/edk/erinio/source/calendar.html.slim",
+		"/Volumes/Content/Sites/edk/erinio/tmp/stylesheets/all.css",
+		"/Volumes/Content/Sites/edk/erinio/source/posts/2014-01-13-six-hours-in-copenhagen.html.md",
+		"/Volumes/Content/Sites/edk/erinio/source/posts/2014-01-14-ahundredyears.html.md",
+		"/Volumes/Content/Sites/edk/erinio/source/posts/2014-01-15-context-clothing.html.md",
+		"/Volumes/Content/Sites/edk/erinio/source/javascripts/nav.js",
+		"/Volumes/Content/Sites/edk/erinio/source/stylesheets/partials/bitters/_typography.scss",
+		"/Volumes/Content/Sites/edk/erinio/source/posts/2014-01-13-shapeways.html.md",
+		"/Users/ekeeffe/Library/Application Support/Sublime Text 3/Packages/User/Emmet.sublime-settings",
+		"/Users/ekeeffe/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/ekeeffe/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/stylesheets/partials/_news-block.css.scss",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/stylesheets/partials/bitters/_variables.scss",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/stylesheets/partials/bitters/_typography.scss",
+		"/Volumes/Content/Sites/edk/erinio/source/stylesheets/partials/_normalize-opentype.scss",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/_header.html.slim",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/stylesheets/partials/_layout.css.scss",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/stylesheets/partials/bitters/mixins/_base.scss",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/index.html.slim",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/README.md",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/stylesheets/all.css.scss",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/stylesheets/partials/bitters/_grid-settings.scss",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/_tool-global-nav.html.slim",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/stylesheets/partials/_helpers.css.scss",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/stylesheets/partials/_footer.css.scss",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/tool-global-nav.html.slim",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/_footer.html.slim",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/stylesheets/partials/_hero.css.scss",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/footer-full.html.slim",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/stylesheets/partials/_header.css.scss",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/stylesheets/partials/_tool-global-nav.css.scss",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/javascripts/_tool-global-nav.js.coffee",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/javascripts/_explore-menu.js.coffee",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/javascripts/_app.js",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/stylesheets/partials/_icons-icomoon.css.scss",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/stylesheets/partials/_shame.css.scss",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/stylesheets/partials/bitters/extends/_type-styles.scss",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/stylesheets/lp-sgp/lp-distribution.css",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/stylesheets/partials/_background.css.scss",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/_hero.html.slim",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/sgp.html.slim",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/lp.html.slim",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/layouts/layout.erb",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/javascripts/all.js",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/javascripts/_smooth-scroll-500.js",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/javascripts/lp-sgp/sgp.js",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/_ie-overlay.html.slim",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/sgp-info-panel.html.slim",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/about.html.slim",
+		"/Volumes/Content/Dropbox (Personal)/hackpad/Untitled.html",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/stylesheets/partials/_ie-overlay.html.slim",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/javascripts/_modernizr-283-custom2.js",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/_news-block.html.slim",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/_wkar-data-table.html.slim",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/_background.html.slim",
+		"/Volumes/Content/Sites/nf/nufamco.sublime-project",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/stylesheets/partials/_navigation.css.scss",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/stylesheets/partials/_landing-old.css.scss",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/landing-old.html.slim",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/javascripts/about.js",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/config.rb",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics.sublime-project",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/layouts/about/index.html.slim",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/stylesheets/partials/bitters/_forms.scss",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/javascripts/_clickoutside.js",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/stylesheets/partials/bitters/extends/_button.scss",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/stylesheets/partials/bitters/mixins/_buttons.scss",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/javascripts/_nav-menus.coffee",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/config.ru",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/javascripts/_velocity-ui-custom.js",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/stylesheets/partials/_animations.css.scss",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/Gemfile",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/javascripts/modernizr-283-custom-1.js",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/javascripts/modernizr-283.js",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/stylesheets/partials/_avatar.css.scss",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/stylesheets/partials/_icons.css.scss",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/stylesheets/partials/bitters/_bitters.scss",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/stylesheets/partials/_normalize.css.scss",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/Gemfile.lock",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/stylesheets/partials/_init.css.scss",
+		"/Volumes/Content/Sites/100yrs/rl-learnalytics/source/stylesheets/normalize.css",
+		"/Volumes/Content/Sites/edk/hubacek-wedding/source/stylesheets/partials/bitters/_variables.scss",
+		"/Volumes/Content/Sites/edk/hubacek-wedding/source/layouts/layout.erb",
+		"/Volumes/Content/Sites/edk/hubacek-wedding/source/stylesheets/partials/bitters/_typography.scss",
+		"/Volumes/Content/Sites/edk/hubacek-wedding/source/stylesheets/partials/bitters/mixins/_base.scss",
+		"/Volumes/Content/Sites/edk/hubacek-wedding/source/index.html.slim",
+		"/Volumes/Content/Sites/edk/hubacek-wedding/source/stylesheets/all.css.scss",
+		"/Volumes/Content/Sites/edk/hubacek-wedding/config.rb",
+		"/Volumes/Content/Sites/edk/hubacek-wedding/Gemfile",
+		"/Volumes/Content/Sites/nf/nufam/source/stylesheets/partials/bitters/_variables.scss",
+		"/Volumes/Content/Sites/edk/hubacek-wedding/source/stylesheets/partials/bitters/_grid-settings.scss",
+		"/Volumes/Content/Sites/edk/hubacek-wedding/.gitignore",
+		"/Volumes/Content/Sites/edk/hubacek-wedding/config.ru",
+		"/Volumes/Content/Sites/edk/hubacek-wedding/Rakefile",
+		"/Volumes/Content/Sites/nf/nufam/source/stylesheets/partials/bitters/_typography.scss",
+		"/Volumes/Content/Sites/nf/nufam/source/index.html.slim",
+		"/Volumes/Content/Sites/nf/nufam/source/stylesheets/partials/_shame.scss",
+		"/Volumes/Content/Sites/nf/nufam/source/stylesheets/partials/bitters/_grid-settings.scss",
+		"/Volumes/Content/Sites/nf/nufam/source/stylesheets/partials/_helpers.scss"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 106.0,
+		"where_history":
+		[
+			"/Volumes/Content/Sites/edk/erinio/source",
+			"/Volumes/Content/Sites/100yrs/rl-learnalytics/source",
+			"/Volumes/Content/Sites/100yrs/rl-learnalytics",
+			"/Volumes/Content/Sites/100yrs/rl-learnalytics/source",
+			"/Volumes/Content/Sites/100yrs/rl-learnalytics",
+			"/Volumes/Content/Sites/edk/hubacek-wedding",
+			"/Volumes/Content/Sites/nf/nufam",
+			"/Volumes/Content/Sites/context/app",
+			"/Volumes/Content/Sites/context",
+			"/Volumes/Content/Sites/context/app",
+			"/Volumes/Content/Sites/context/app/views/admin",
+			"",
+			"/Volumes/Content/Sites/context/app/assets",
+			"/Volumes/Content/Sites/context/app/views",
+			"",
+			"/Volumes/Content/Sites/context",
+			"/Volumes/Content/Dropbox/edk/staypositive",
+			"/Volumes/Content/Dropbox/edk/blooming-lotus/dev/redesign-static/sass",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"partial",
+			"loca",
+			"= partial",
+			"partial",
+			"// ",
+			"color",
+			"2px",
+			", ",
+			".summary-img",
+			"41.7",
+			".row",
+			",row",
+			".home-article-list",
+			".space",
+			"$nav-trigger-size-desktop",
+			".container",
+			"byline",
+			"overlayNav",
+			"scale",
+			"0.89",
+			".89",
+			"$logo-color-dark",
+			"$base-font-color",
+			"$logo-color-dark-white",
+			"$blue",
+			"style1",
+			"highl",
+			"scroll",
+			"side",
+			"tint($",
+			"tint",
+			"optimize",
+			"center center",
+			"fixed",
+			"style=\"",
+			".sgp &",
+			"footer",
+			"\"/wkar\"",
+			"/wkar",
+			"slideUp",
+			"slideDown",
+			"slideUp",
+			"slideDown",
+			"menu__trigger",
+			"$nav-right-icon-size",
+			"icon--nav-menu",
+			"$blue-white",
+			"Down",
+			"Up",
+			".learnalytics",
+			"global-nav",
+			"logo",
+			".tool-nav",
+			"toolNavSpeed",
+			".tool-nav",
+			"toolNavTop",
+			"toolNavOverlay",
+			"toolNavToggle",
+			"toolNavInner",
+			"navToggle",
+			"ToolNav",
+			"footer-menu",
+			"slideDownOut",
+			"toggle-link",
+			".menu-overlay",
+			"menu--open",
+			".tool-nav__inner",
+			".app-nav",
+			"menuOverlay",
+			"menuToggle",
+			"MenuToggle",
+			"menu.",
+			"ExploreMenu",
+			"enuClose",
+			"drawers",
+			"Drawers",
+			"menuToggle",
+			"grey",
+			"gray",
+			"index-bg",
+			"lal-bg-image-blurred-max-1",
+			"what students <strong>lik",
+			"avata",
+			".window",
+			" \\",
+			"sentence to see the Growth ",
+			"0px ",
+			"problem-icon-size",
+			"desktop",
+			"$problem-icon-size-desktop",
+			"overflow",
+			"triangle",
+			"quote-ans",
+			"ature-video-bg-lp-1.png",
+			"style=\"background-image",
+			"background-image",
+			"56.3%",
+			".device__viewport",
+			"video",
+			"collapse",
+			"see your Learning Progression",
+			"insights",
+			".avatar",
+			".icon-graduation",
+			"icon-",
+			".problem-avatar",
+			".problem-text.problem-text--question",
+			".problem-text.problem-text--answer",
+			".problem-question",
+			"eacher-03.png\"",
+			".dotted-arrow",
+			".quote-question",
+			"49%",
+			"2px dashed $gray",
+			"$demo-triangle-size-desktop",
+			"content-box",
+			"$base-border-radius",
+			"quote-answer",
+			"dotted",
+			"arrow",
+			"br",
+			"arrow-right",
+			"background-size",
+			"-image",
+			"background-im",
+			"color-bg",
+			"border",
+			"avatar"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			".home-article-items",
+			"$nav-logo-size-desktop",
+			"$nav-color-dark",
+			"\"http://www.learnalytics.com/wkar/\"",
+			"tool-nav__top",
+			".tool-nav",
+			".quote-question",
+			".home-feature__inner",
+			".logo-menu-icon",
+			".feature-device",
+			".device__ui",
+			".device__viewport",
+			".feature-demo--device",
+			"$avatar-home-size-desktop",
+			"media($netbook-13)",
+			"media($netbook-11)",
+			"media($not-phone)",
+			"media($phone)",
+			"media($fablet)",
+			"media($phone)",
+			"media($phone-wide-only)",
+			"media($phone-wide)",
+			"media($tablet-only)",
+			"media($tablet)",
+			"media($desktop-narrow-only)",
+			"media($desktop-narrow)",
+			"media($desktop)",
+			"media($desktop-wide)",
+			"media($mobile)",
+			"media(",
+			".account-shipping-addresses",
+			".icon-reorder",
+			"$caslon",
+			"$pragmatica",
+			"respond-to(desktop-wide)",
+			"",
+			"button",
+			".button",
+			"$serif",
+			".top-bar",
+			"$primary-lightest",
+			"$primary-lighter",
+			"$primary-lightest",
+			"@import 'initialize';",
+			"contextclothing"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "source/stylesheets/partials/bitters/_grid-settings.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1185,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Solarized (dark).tmTheme",
+							"syntax": "Packages/SCSS/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "source/stylesheets/partials/bitters/_bitters.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 507,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Solarized (dark).tmTheme",
+							"syntax": "Packages/SCSS/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "source/javascripts/nav.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 3034,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Solarized (dark).tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "source/layouts/layout.slim",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2001,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1401,
+								1408
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Solarized (dark).tmTheme",
+							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "source/stylesheets/partials/_shame.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 521,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								15,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Solarized (dark).tmTheme",
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "source/stylesheets/partials/_init.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 491,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								432,
+								432
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Solarized (dark).tmTheme",
+							"syntax": "Packages/SCSS/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "source/stylesheets/partials/bitters/mixins/_base.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 615,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								615,
+								18
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Solarized (dark).tmTheme",
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 276.0
+	},
+	"project": "erinio.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"coff",
+				"source/javascripts/main.coffee"
+			],
+			[
+				"layout",
+				"source/layouts/layout.slim"
+			],
+			[
+				"mixin",
+				"source/stylesheets/partials/bitters/mixins/_base.scss"
+			],
+			[
+				"shame",
+				"source/stylesheets/partials/_shame.scss"
+			],
+			[
+				"grid",
+				"source/stylesheets/partials/bitters/_grid-settings.scss"
+			],
+			[
+				"allcss",
+				"source/stylesheets/all.css.scss"
+			],
+			[
+				"mix",
+				"source/stylesheets/partials/bitters/mixins/_base.scss"
+			],
+			[
+				"var",
+				"source/stylesheets/partials/bitters/_variables.scss"
+			],
+			[
+				"arla",
+				"source/layouts/article_layout.slim"
+			],
+			[
+				"arti",
+				"source/stylesheets/partials/_articles.scss"
+			],
+			[
+				"layou",
+				"source/stylesheets/partials/_layout.scss"
+			],
+			[
+				"sha",
+				"source/stylesheets/partials/_shame.scss"
+			],
+			[
+				"lay",
+				"source/layouts/layout.slim"
+			],
+			[
+				"nav",
+				"source/javascripts/nav.js"
+			],
+			[
+				"artic",
+				"source/stylesheets/partials/_articles.scss"
+			],
+			[
+				"scss",
+				"source/stylesheets/partials/_layout.scss"
+			],
+			[
+				"navsl",
+				"source/_nav.html.slim"
+			],
+			[
+				"typ",
+				"source/stylesheets/partials/bitters/_typography.scss"
+			],
+			[
+				"typo",
+				"source/stylesheets/partials/bitters/_typography.scss"
+			],
+			[
+				"inde",
+				"source/index.html.slim"
+			],
+			[
+				"logo",
+				"source/images/logo/logo-sm.svg"
+			],
+			[
+				"ico",
+				"source/stylesheets/partials/_icons-icomoon.scss"
+			],
+			[
+				"gri",
+				"source/stylesheets/partials/bitters/_grid-settings.scss"
+			],
+			[
+				"sham",
+				"source/stylesheets/partials/_shame.scss"
+			],
+			[
+				"yp",
+				"source/stylesheets/partials/bitters/_typography.scss"
+			],
+			[
+				"index",
+				"source/index.html.slim"
+			],
+			[
+				"head",
+				"source/_header.html.slim"
+			],
+			[
+				"confi",
+				"config.rb"
+			],
+			[
+				"all",
+				"source/javascripts/all.js"
+			],
+			[
+				"scroll",
+				"source/javascripts/_smooth-scroll-500.js"
+			],
+			[
+				"ream",
+				"README.md"
+			],
+			[
+				"footerfu",
+				"source/footer-full.html.slim"
+			],
+			[
+				"footer",
+				"source/footer-full.html.slim"
+			],
+			[
+				"help",
+				"source/stylesheets/partials/_helpers.css.scss"
+			],
+			[
+				"helper",
+				"source/stylesheets/partials/_helpers.css.scss"
+			],
+			[
+				"ty",
+				"source/stylesheets/partials/bitters/extends/_type-styles.scss"
+			],
+			[
+				"header",
+				"source/stylesheets/partials/_header.css.scss"
+			],
+			[
+				"icon",
+				"source/stylesheets/partials/_icons-icomoon.css.scss"
+			],
+			[
+				"app",
+				"source/javascripts/_app.js"
+			],
+			[
+				"helpe",
+				"source/stylesheets/partials/_helpers.css.scss"
+			],
+			[
+				"alljs",
+				"source/javascripts/all.js"
+			],
+			[
+				"sgpinf",
+				"source/sgp-info-panel.html.slim"
+			],
+			[
+				"about",
+				"source/about.html.slim"
+			],
+			[
+				"lp",
+				"source/lp.html.slim"
+			],
+			[
+				"ieover",
+				"source/_ie-overlay.html.slim"
+			],
+			[
+				"ie-ov",
+				"source/stylesheets/partials/_ie-overlay.html.slim"
+			],
+			[
+				"moder",
+				"source/javascripts/_modernizr-283-custom2.js"
+			],
+			[
+				"lp-dis",
+				"source/stylesheets/lp-sgp/lp-distribution.css"
+			],
+			[
+				"news",
+				"source/stylesheets/partials/_news-block.css.scss"
+			],
+			[
+				"ap",
+				"source/javascripts/_app.js"
+			],
+			[
+				"data",
+				"source/_wkar-data-table.html.slim"
+			],
+			[
+				"hero",
+				"source/stylesheets/partials/_hero.css.scss"
+			],
+			[
+				"backg",
+				"source/_background.html.slim"
+			],
+			[
+				"back",
+				"source/stylesheets/partials/_background.css.scss"
+			],
+			[
+				"backgr",
+				"source/_background.html.slim"
+			],
+			[
+				"new",
+				"source/_news-block.html.slim"
+			],
+			[
+				"all.js",
+				"source/javascripts/all.js"
+			],
+			[
+				"config",
+				"config.rb"
+			],
+			[
+				"forms",
+				"source/stylesheets/partials/bitters/_forms.scss"
+			],
+			[
+				"buttons",
+				"source/stylesheets/partials/bitters/mixins/_buttons.scss"
+			],
+			[
+				"button",
+				"source/stylesheets/partials/bitters/extends/_button.scss"
+			],
+			[
+				"app.",
+				"source/javascripts/_app.js"
+			],
+			[
+				"helps",
+				"source/stylesheets/partials/_helpers.css.scss"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"butt",
+				"source/stylesheets/partials/bitters/extends/_button.scss"
+			],
+			[
+				"layo",
+				"source/layouts/layout.erb"
+			],
+			[
+				"base",
+				"source/stylesheets/partials/bitters/mixins/_base.scss"
+			],
+			[
+				"gemf",
+				"Gemfile.lock"
+			],
+			[
+				"bitter",
+				"source/stylesheets/partials/bitters/_bitters.scss"
+			],
+			[
+				"init",
+				"source/stylesheets/partials/_init.css.scss"
+			],
+			[
+				"mixins",
+				"source/stylesheets/partials/bitters/mixins/_base.scss"
+			],
+			[
+				"conf",
+				"config.rb"
+			],
+			[
+				"confg",
+				"config.rb"
+			],
+			[
+				"hsame",
+				"app/assets/stylesheets/partials/_shame.css.scss"
+			],
+			[
+				"appl",
+				"app/views/layouts/application.html.slim"
+			],
+			[
+				"productshow",
+				"app/views/products/show.html.slim"
+			],
+			[
+				"productcss",
+				"app/assets/stylesheets/partials/_product-details.css.scss"
+			],
+			[
+				"add-to",
+				"app/assets/javascripts/main/add-to-cart.js.coffee"
+			],
+			[
+				"products.js",
+				"app/assets/javascripts/main/product-images.js.coffee"
+			],
+			[
+				"productjs",
+				"app/assets/javascripts/main/products.js.coffee"
+			],
+			[
+				"homep",
+				"app/views/pages/homepage.html.slim"
+			],
+			[
+				"swipe",
+				"app/assets/javascripts/main/homepage-swipe.js.coffee"
+			],
+			[
+				"strip",
+				"app/assets/javascripts/main/stripe-form.js.coffee"
+			],
+			[
+				"review",
+				"app/assets/javascripts/main/order-review.js.coffee"
+			],
+			[
+				"orderjs",
+				"app/assets/javascripts/main/order.js.coffee"
+			],
+			[
+				"filter",
+				"app/views/products/_filter-list.html.slim"
+			],
+			[
+				"stripe",
+				"app/assets/javascripts/main/stripe-form.js.coffee"
+			],
+			[
+				"cartitem",
+				"app/assets/javascripts/main/cart-items.js.coffee"
+			],
+			[
+				"create",
+				"app/views/application/create.js.coffee"
+			],
+			[
+				"form",
+				"app/assets/stylesheets/partials/_forms.css.scss"
+			],
+			[
+				"addtoca",
+				"app/assets/javascripts/main/add-to-cart.js.coffee"
+			],
+			[
+				"destroy",
+				"app/views/application/destroy.js.coffee"
+			],
+			[
+				"checkout",
+				"app/views/orders/checkout.html.slim"
+			],
+			[
+				"cartjs",
+				"app/assets/javascripts/main/cart-items.js.coffee"
+			],
+			[
+				"addtocart",
+				"app/assets/javascripts/main/add-to-cart.js.coffee"
+			],
+			[
+				"show",
+				"app/views/products/show.html.slim"
+			],
+			[
+				"ui",
+				"app/assets/stylesheets/partials/_ui.css.scss"
+			],
+			[
+				"itemlist",
+				"app/views/orders/_item_list.html.slim"
+			],
+			[
+				"cartitemsslim",
+				"app/views/application/_cart-items.html.slim"
+			],
+			[
+				"cartslim",
+				"app/views/orders/cart.html.slim"
+			],
+			[
+				"servi",
+				"app/views/pages/service.html.slim"
+			],
+			[
+				"helpers",
+				"app/assets/stylesheets/partials/_helpers.css.scss"
+			],
+			[
+				"adminheader",
+				"app/views/layouts/_admin-header.html.slim"
+			],
+			[
+				"productcard",
+				"app/assets/stylesheets/partials/_product-cards.css.scss"
+			],
+			[
+				"chosen",
+				"app/assets/javascripts/main/load-chosen.js.coffee"
+			],
+			[
+				"seed",
+				"db/seeds.rb"
+			],
+			[
+				"rake",
+				"Rakefile"
+			],
+			[
+				"get-in",
+				"app/views/application/_get-in-touch.html.slim"
+			],
+			[
+				"social",
+				"app/views/application/_social-links.html.slim"
+			],
+			[
+				"order_co",
+				"app/views/mailer/order_comfirmation.html.slim"
+			],
+			[
+				"serv",
+				"app/views/pages/service.html.slim"
+			],
+			[
+				"sty",
+				"app/assets/stylesheets/styleguide.css.scss"
+			],
+			[
+				"site-wide",
+				"app/views/application/_site-wide-nav.html.slim"
+			],
+			[
+				"giti",
+				".gitignore"
+			],
+			[
+				"glob",
+				"app/assets/stylesheets/partials/_globals.css.scss"
+			],
+			[
+				"icons",
+				"app/assets/stylesheets/partials/_icons.css.scss"
+			],
+			[
+				"service",
+				"app/views/pages/service.html.slim"
+			],
+			[
+				"home",
+				"app/views/pages/homepage.html.slim"
+			],
+			[
+				"billing_inf",
+				"app/views/orders/_billing_info.html.slim"
+			],
+			[
+				"checkou",
+				"app/views/orders/checkout.html.slim"
+			],
+			[
+				"",
+				"app/views/orders/checkout.html.slim"
+			],
+			[
+				"globa",
+				"app/assets/stylesheets/partials/_globals.css.scss"
+			],
+			[
+				"drawe",
+				"app/assets/stylesheets/partials/_drawers.css.scss"
+			],
+			[
+				"drawer",
+				"app/assets/javascripts/main/drawers.js.coffee"
+			],
+			[
+				"account",
+				"app/views/users/account.html.slim"
+			],
+			[
+				"prodcards",
+				"app/assets/stylesheets/partials/_product-cards.css.scss"
+			],
+			[
+				"measure",
+				"app/views/products/_measurment-chart.html.slim"
+			],
+			[
+				"sitewide",
+				"app/views/application/_site-wide-nav.html.slim"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/Volumes/Content/Sites/rails-cloud-cms/rails-cloud-cms.sublime-project"
+			],
+			[
+				"rail",
+				"/Volumes/Content/Sites/rails-cloud-cms/rails-cloud-cms.sublime-project"
+			],
+			[
+				"rai",
+				"/Volumes/Content/Sites/rails-cloud-cms.sublime-workspace"
+			],
+			[
+				"erin",
+				"/Volumes/Content/Sites/edk/erinio.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 230.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
