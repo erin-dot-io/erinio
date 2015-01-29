@@ -9,9 +9,10 @@
             .container.top-narrow
               h1
                 = current_article.data.title
-    .article-body
+    .article__body
       .container.narrow
         - if current_article.data.style != 'cover-image'
-          h1
-            = current_article.data.title
+          .nav-spacer
+            h1
+              = current_article.data.title
         = yield

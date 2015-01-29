@@ -8,6 +8,18 @@ html.js.turbolinks-progress-bar::before {
   background-color: $nav-color-dark;
 }
 
+// html:after {
+//   content: " ";
+//   @include position(fixed, 0 0 null 0);
+//   height: 2px;
+//   background-color: $nav-color-dark;
+//   display: block;
+// }
+
+// html.fetching::after {
+//   display: none;
+// }
+
 html {
   &.modal-open {
     // overflow-y: scroll;

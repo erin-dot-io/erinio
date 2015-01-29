@@ -1,17 +1,22 @@
 @import 'init';
 
+.nav-spacer {
+  margin-top: ($nav-padding-desktop * 2) + $nav-logo-size-desktop;
+}
+
 .container {
   @include outer-container;
   @include box-sizing(content-box);
   padding: 0 $grid-padding-desktop;
   &.narrow {
-    max-width: em(740);
+    max-width: em(700);
   }
   &.top-narrow {
     max-width: em(800);
   }
   @include media($desktop-narrow) {
-    padding: 0 $nav-padding-desktop 0 (($nav-padding-desktop * 2) + $nav-logo-size-desktop);
+    // padding: 0 $nav-padding-desktop 0 (($nav-padding-desktop * 2) + $nav-logo-size-desktop);
+    padding: 0 (($nav-padding-desktop * 2) + $nav-logo-size-desktop);
     .article__cover & {padding: 0 $grid-padding-desktop;}
   }
   @include media($tablet) {

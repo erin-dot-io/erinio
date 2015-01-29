@@ -3,7 +3,7 @@ pageable: true
 per_page: 10
 ---
 
-.homepage-content
+.nav-spacer
 
   - if paginate && num_pages > 1
     .container
@@ -12,8 +12,9 @@ per_page: 10
       - if prev_page
         p= link_to 'Previous page', prev_page
 
-  .home-logo
-    = partial "images/logo/logo-outline-lg.svg"
+  .container
+    .home-logo
+      = partial "images/logo/logo-outline-lg.svg"
 
   .home-article-items
     .container.narrow
@@ -37,6 +38,8 @@ per_page: 10
               h2.article-item__title
                 = article.title
               .article-item__info
+                / p
+                /   = article.summary
                 - if article.data.subtitle?
                   span
                     = article.data.subtitle
